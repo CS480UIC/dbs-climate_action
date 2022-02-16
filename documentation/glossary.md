@@ -53,3 +53,10 @@ This relationship states the air quality index reported by each state for a give
 
 ### state_emits_carobon_dioxide:
 This relationship states the levels of carbon dioxide emitted by each state per year.
+
+### state_encounters_natural_disaster:
+This relationship shows that a state encounters a natural disaster. A particular state can encounter multiple natural disasters, though it isn’t required to encounter a natural disaster. 
+
+### state_causes_deforestation:
+This relationship show that a state can cause deforestation. 
+
