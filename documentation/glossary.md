@@ -21,7 +21,7 @@
  
  --Description: This entity stores the year wise air quality index for each state of the U.S.A.
  
-###carbon_dioxide_emission
+### carbon_dioxide_emission
  --Name: carbon_dioxide_emission
  
  --Synonym: CO2, Carbonic Acid, Methane
