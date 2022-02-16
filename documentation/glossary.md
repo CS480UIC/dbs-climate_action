@@ -17,28 +17,28 @@
 ### aqi
  --Name: aqi
  
- --Synonym: Air Quality Index
+ --Synonyms: Air Quality Index
  
  --Description: This entity stores the year wise air quality index for each state of the U.S.A.
  
 ### carbon_dioxide
  --Name: carbon_dioxide
  
- --Synonym: CO2, Carbonic Acid, Methane
+ --Synonyms: CO2, Carbonic Acid, Methane
  
  --Description: This entity stores the carbon-di-oxide emission produced by each state in the U.S.A. on the yearly basis.
  
  ### natural disaster
 --Name: natural_disaster
 
---Synonym: inevitable accidents, a phenomenon 
+--Synonyms: inevitable accidents, a phenomenon 
 
 --Description: shows if any natural event such as a flood, earthquake or hurricane occurs in a state.
 
 ### deforestation
 --Name: deforestation
 
---Synonym: urbanization, desertification
+--Synonyms: urbanization, desertification
 
 --Description: shows how much land is cleared to make room for urban growth. 
 
