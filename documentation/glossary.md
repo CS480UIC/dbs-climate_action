@@ -82,14 +82,14 @@ This relationship show that a state can cause deforestation.
 
 --code VARCHAR
 
---id INT
+--id INTEGER
 
 ### population
---p_id INT
+--p_id INTEGER
 
---year INT
+--year INTEGER
 
---p_value INT
+--p_value INTEGER
 
 
  # aqi
