@@ -92,14 +92,14 @@ This relationship show that a state can cause deforestation.
 --p_value INTEGER
 
 
- # aqi
+ ### aqi
   --aqi_id INTEGER
   
   --year INTEGER
   
   --aqi_metric DECIMAL(4,2)
   
- # carbon_dioxide
+ ### carbon_dioxide
   --co_id INTEGER
   
   --year INTEGER
