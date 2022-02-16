@@ -72,4 +72,4 @@ This relationship show that a state can cause deforestation.
  
  ### aqi - aqi_id 1-1(1), year M-1(1), aqi_metric M-1(1)
  
- ### carbon_dioxide - co_id 1-1(1), year M-1(1), co_metric(1)
+ ### carbon_dioxide - co_id 1-1(1), year M-1(1), co_metric M-1(1)
