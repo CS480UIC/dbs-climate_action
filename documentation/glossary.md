@@ -78,11 +78,11 @@ This relationship show that a state can cause deforestation.
 # Attribute Data Types
 
 ### state
-name VARCHAR
-code VARCHAR
-id INT
+--name VARCHAR
+--code VARCHAR
+--id INT
 
 ### population
-p_id INT
-year INT
-p_value INT
+--p_id INT
+--year INT
+--p_value INT
