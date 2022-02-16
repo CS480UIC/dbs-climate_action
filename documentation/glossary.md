@@ -79,10 +79,15 @@ This relationship show that a state can cause deforestation.
 
 ### state
 --name VARCHAR
+
 --code VARCHAR
+
 --id INT
 
 ### population
 --p_id INT
+
 --year INT
+
 --p_value INT
+
