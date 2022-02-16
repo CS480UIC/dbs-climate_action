@@ -7,8 +7,8 @@
 climate_action
 
 # Author(s)
-SAKSHAM AYUSH
-DEEPANSHU RAGHUVANSHI
+SAKSHAM AYUSH,
+DEEPANSHU RAGHUVANSHI,
 JAHNAVI EGA
 
 # Database description
