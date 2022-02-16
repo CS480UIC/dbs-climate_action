@@ -60,3 +60,16 @@ This relationship shows that a state encounters a natural disaster. A particular
 ### state_causes_deforestation:
 This relationship show that a state can cause deforestation. 
 
+
+ # Attributes
+ ### state - id 1-1(1), name M-1(1), code M-1(1)
+ 
+ ### population - p_id 1-1(1), year M-1(1), p_value M-1(1)
+ 
+ ### natural_disaster - n_id 1-1(1), year M-1(1), n_metric 1-1(1)
+ 
+ ### deforestation - def_id 1-1(1), year M-1(1), def_metric M-1(1)
+ 
+ ### aqi - aqi_id 1-1(1), year M-1(1), aqi_metric M-1(1)
+ 
+ ### carbon_dioxide - co_id 1-1(1), year M-1(1), co_metric(1)
