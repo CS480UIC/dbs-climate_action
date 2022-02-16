@@ -7,7 +7,8 @@
 climate_action
 
 # Author(s)
-SAKSHAM AYUSH,
+
+Saksham Ayush,
 DEEPANSHU RAGHUVANSHI,
 JAHNAVI EGA
 
