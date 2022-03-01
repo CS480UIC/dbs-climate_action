@@ -78,45 +78,45 @@ This relationship show that a state can cause deforestation.
 # Attribute Data Types
 
 ### state
---name VARCHAR
+--name VARCHAR UNIQUE NOT NULL
 
---code VARCHAR
+--code VARCHAR UNIQUE NOT NULL
 
---id INTEGER
+--id INTEGER UNIQUE NOT NULL
 
 ### population
---p_id INTEGER
+--p_id INTEGER UNIQUE NOT NULL
 
---year INTEGER
+--year INTEGER NOT NULL
 
---p_value INTEGER
+--p_value INTEGER NOT NULL
 
 
  ### aqi
- --aqi_id INTEGER
+ --aqi_id INTEGER UNIQUE NOT NULL
   
- --year INTEGER
+ --year INTEGER NOT NULL
   
- --aqi_metric DECIMAL(4,2)
+ --aqi_metric DECIMAL(4,2) NOT NULL
   
  ### carbon_dioxide
- --co_id INTEGER
+ --co_id INTEGER UNIQUE NOT NULL
   
- --year INTEGER
+ --year INTEGER NOT NULL
   
- --co_metric DECIMAL(3,2)
+ --co_metric DECIMAL(3,2) NOT NULL
   
   ### natural_disaster
-  --n_id INTEGER
+  --n_id INTEGER UNIQUE NOT NULL
 
-  --year INTEGER
+  --year INTEGER NOT NULL
 
-  --n_metric DECIMAL (3,2)
+  --n_metric DECIMAL (3,2) NOT NULL
 
 ### deforestation
- --def_id INTEGER
+ --def_id INTEGER UNIQUE NOT NULL
 
- --year INTEGER
+ --year INTEGER NOT NULL
  
- --def_metric DECIMAL (3,2)
+ --def_metric DECIMAL (3,2) NOT NULL
 
