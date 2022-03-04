@@ -62,17 +62,17 @@ This relationship show that a state can cause deforestation.
 
 
  # Attributes
- ### state - id 1-1(1), name M-1(1), code M-1(1)
+ ### state - code 1-1(1), name M-1(1), area M-1(1)
  
- ### population - p_id 1-1(1), year M-1(1), p_value M-1(1)
+ ### population - p_id 1-1(1), recorded_year M-1(1), p_value M-1(1)
  
- ### natural_disaster - n_id 1-1(1), year M-1(1), n_metric 1-1(1)
+ ### natural_disaster - n_id 1-1(1), disaster_name M-1(1), occurence_year M-1(1), damage_cost 1-1(1)
  
  ### deforestation - def_id 1-1(1), year M-1(1), def_metric M-1(1)
  
- ### aqi - aqi_id 1-1(1), year M-1(1), aqi_metric M-1(1)
+ ### aqi - aqi_id 1-1(1), measuring_year M-1(1), aqi_metric M-1(1), reporting_city M-1(1)
  
- ### carbon_dioxide - co_id 1-1(1), year M-1(1), co_metric M-1(1)
+ ### carbon_dioxide - co_id 1-1(1), emission_year M-1(1), co_metric M-1(1)
 
 
 # Attribute Data Types
@@ -82,12 +82,12 @@ This relationship show that a state can cause deforestation.
 
 --code VARCHAR UNIQUE NOT NULL
 
---id INTEGER UNIQUE NOT NULL
+--area DECIMAL(4,2) NOT NULL
 
 ### population
 --p_id INTEGER UNIQUE NOT NULL
 
---year INTEGER NOT NULL
+--recorded_year INTEGER NOT NULL
 
 --p_value INTEGER NOT NULL
 
@@ -95,23 +95,27 @@ This relationship show that a state can cause deforestation.
  ### aqi
  --aqi_id INTEGER UNIQUE NOT NULL
   
- --year INTEGER NOT NULL
+ --measuring_year INTEGER NOT NULL
   
  --aqi_metric DECIMAL(4,2) NOT NULL
+ 
+ --reproting_city VARCHAR(4,2) NOT NULL
   
  ### carbon_dioxide
  --co_id INTEGER UNIQUE NOT NULL
   
- --year INTEGER NOT NULL
+ --emission_year INTEGER NOT NULL
   
  --co_metric DECIMAL(3,2) NOT NULL
   
   ### natural_disaster
   --n_id INTEGER UNIQUE NOT NULL
+  
+  --disaster_name VARCHAR(20) NOT NULL
 
-  --year INTEGER NOT NULL
+  --occurence_year INTEGER NOT NULL
 
-  --n_metric DECIMAL (3,2) NOT NULL
+  --damage_cost DECIMAL (3,2) NOT NULL
 
 ### deforestation
  --def_id INTEGER UNIQUE NOT NULL
