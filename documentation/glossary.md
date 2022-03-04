@@ -116,6 +116,10 @@ This relationship show that a state can cause deforestation.
   --occurence_year INTEGER NOT NULL
 
   --damage_cost DECIMAL (3,2) NOT NULL
+  
+  ### state_natural_disaster
+  --code UNIQUE NOT NULL
+  --n_id UNIQUE NOT NULL
 
 ### deforestation
  --def_id INTEGER UNIQUE NOT NULL
