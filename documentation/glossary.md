@@ -121,6 +121,7 @@ This relationship show that a state can cause deforestation.
   
   ### state_natural_disaster
   --code UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
+  
   --n_id UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
 
 ### deforestation
@@ -132,21 +133,32 @@ This relationship show that a state can cause deforestation.
  
 # Dependent entities and dependency relationships:
  -- state is independent
+ 
  -- natural_disaster is independent
+ 
  -- population is dependent on state
+ 
  -- deforestation is dependent on state
+ 
  -- carbon_dioxide is dependent on state
+ 
  -- aqi is dependent on state
+ 
  -- state_natural_disaster is dependent on state and natural_disaster
 
 # Cascade and restrict rules on foreign keys that implement dependency relationships
 
 ### CASCADE:
  -- p_id for Update and Delete
+ 
  -- def_id for Update and Delete
+ 
  -- co_id for Update and Delete
+ 
  -- aqi_id for Update and Delete
+ 
  -- state_natural_disaster.code for Update and Delete
+ 
  -- state_natural_disaster.n_id for Update and Delete
  
 ### RESTRICT:
