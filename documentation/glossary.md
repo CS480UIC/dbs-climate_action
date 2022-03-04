@@ -73,6 +73,8 @@ This relationship show that a state can cause deforestation.
  ### aqi - aqi_id 1-1(1), measuring_year M-1(1), aqi_metric M-1(1), reporting_city M-1(1)
  
  ### carbon_dioxide - co_id 1-1(1), emission_year M-1(1), co_metric M-1(1)
+ 
+ ### state_natural_disaster - code 1-1(1), n_id 1-1(1)
 
 
 # Attribute Data Types
@@ -80,36 +82,36 @@ This relationship show that a state can cause deforestation.
 ### state
 --name VARCHAR UNIQUE NOT NULL
 
---code VARCHAR UNIQUE NOT NULL
+--code VARCHAR UNIQUE NOT NULL PRIMARY KEY
 
 --area DECIMAL(4,2) NOT NULL
 
 ### population
---p_id INTEGER UNIQUE NOT NULL
+--p_id INTEGER UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
 
---recorded_year INTEGER NOT NULL
+--recorded_year INTEGER NOT NULL PRIMARY KEY
 
 --p_value INTEGER NOT NULL
 
 
  ### aqi
- --aqi_id INTEGER UNIQUE NOT NULL
+ --aqi_id INTEGER UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
   
- --measuring_year INTEGER NOT NULL
+ --measuring_year INTEGER NOT NULL PRIMARY KEY
   
  --aqi_metric DECIMAL(4,2) NOT NULL
  
- --reproting_city VARCHAR(4,2) NOT NULL
+ --reproting_city VARCHAR(4,2) NOT NULL PRIMARY KEY
   
  ### carbon_dioxide
- --co_id INTEGER UNIQUE NOT NULL
+ --co_id INTEGER UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
   
- --emission_year INTEGER NOT NULL
+ --emission_year INTEGER NOT NULL PRIMARY KEY
   
  --co_metric DECIMAL(3,2) NOT NULL
   
   ### natural_disaster
-  --n_id INTEGER UNIQUE NOT NULL
+  --n_id INTEGER UNIQUE NOT NULL PRIMARY KEY
   
   --disaster_name VARCHAR(20) NOT NULL
 
@@ -118,13 +120,34 @@ This relationship show that a state can cause deforestation.
   --damage_cost DECIMAL (3,2) NOT NULL
   
   ### state_natural_disaster
-  --code UNIQUE NOT NULL
-  --n_id UNIQUE NOT NULL
+  --code UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
+  --n_id UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
 
 ### deforestation
- --def_id INTEGER UNIQUE NOT NULL
+ --def_id INTEGER UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
 
- --year INTEGER NOT NULL
+ --year INTEGER NOT NULL PRIMARY KEY
  
  --def_metric DECIMAL (3,2) NOT NULL
+ 
+# Dependent entities and dependency relationships:
+ -- state is independent
+ -- natural_disaster is independent
+ -- population is dependent on state
+ -- deforestation is dependent on state
+ -- carbon_dioxide is dependent on state
+ -- aqi is dependent on state
+ -- state_natural_disaster is dependent on state and natural_disaster
 
+# Cascade and restrict rules on foreign keys that implement dependency relationships
+
+### CASCADE:
+ -- p_id for Update and Delete
+ -- def_id for Update and Delete
+ -- co_id for Update and Delete
+ -- aqi_id for Update and Delete
+ -- state_natural_disaster.code for Update and Delete
+ -- state_natural_disaster.n_id for Update and Delete
+ 
+### RESTRICT:
+ -- No restrict actions
