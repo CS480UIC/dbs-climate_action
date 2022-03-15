@@ -24,7 +24,7 @@
   <h1>Delete state entity</h1>
 <form action="<c:url value='/state_delete_output.jsp'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete state   :<input type="text" name="username" value="${form.username }"/>
+	Delete state   :<input type="text" name="code" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
 	<input type="submit" value="Delete State"/>

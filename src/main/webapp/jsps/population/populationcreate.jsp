@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Population Creat</title>
+    <title>Population Create</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -26,7 +26,7 @@
 	State Code    :<input type="text" name="p_id" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-	Recorded Year：<input type="password" name="recorded_year" value="${form.password }"/>
+	Recorded Year：<input type="number" name="recorded_year" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
 	<br/>
 	Value	：<input type="number" name="p_value" value="${form.email }"/>
