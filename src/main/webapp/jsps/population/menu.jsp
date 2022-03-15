@@ -22,12 +22,12 @@
   </head>
   
   <body>
-    <h1>CRUD operations for state entity </h1>
+    <h1>CRUD operations for population entity </h1>
     <br>
-	<a href="<c:url value='/jsps/entity1/entity1create.jsp'/>" target="_parent">Create state entity</a> |&nbsp; 
-	<a href="<c:url value='/jsps/entity1/entity1read.jsp'/>" target="_parent">Read state entity</a> |&nbsp;
-	<a href="<c:url value='/jsps/entity1/entity1update.jsp'/>" target="_parent">Update state entity</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/entity1/entity1delete.jsp'/>" target="_parent">Delete state entity</a>	
+	<a href="<c:url value='/jsps/entity1/entity1create.jsp'/>" target="_parent">Create population entity</a> |&nbsp; 
+	<a href="<c:url value='/jsps/entity1/entity1read.jsp'/>" target="_parent">Read population entity</a> |&nbsp;
+	<a href="<c:url value='/jsps/entity1/entity1update.jsp'/>" target="_parent">Update population entity</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/entity1/entity1delete.jsp'/>" target="_parent">Delete population entity</a>	
 	    
   </body>
 </html>
