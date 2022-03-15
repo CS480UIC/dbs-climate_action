@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Update State</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,25 +21,25 @@
   </head>
   
   <body>
-  <h1>Update Entity</h1>
+  <h1>Update State</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username1" value="${entity1.username }" disabled/>
+	State Code    :<input type="text" name="code" value="${entity1.username }" disabled/>
 	<br/>
 	
-	Password：<input type="text" name="password1" value="${entity1.password }" disabled />
+	State Name：<input type="text" name="name" value="${entity1.password }" disabled />
 	<br/>
-	Email	：<input type="text" name="email1" value="${entity1.email }" disabled/>
+	State Area	：<input type="text" name="area" value="${entity1.email }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 				<input type="hidden" name="username" value="${entity1.username }"/>
-	Password：<input type="password" name="password" value="${form.password }"/>
+	State Name：<input type="password" name="name" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
+	State Area	：<input type="text" name="area" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
 	<input type="submit" value="Update Entity1"/>

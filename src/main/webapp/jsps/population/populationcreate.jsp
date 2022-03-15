@@ -32,7 +32,7 @@
 	Value	：<input type="number" name="p_value" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
-	<input type="submit" value="Create Entity1"/>
+	<input type="submit" value="Create Population"/>
 </form>
   </body>
 </html>
