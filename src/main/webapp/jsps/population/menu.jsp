@@ -24,10 +24,10 @@
   <body>
     <h1>CRUD operations for population entity </h1>
     <br>
-	<a href="<c:url value='/jsps/entity1/entity1create.jsp'/>" target="_parent">Create population entity</a> |&nbsp; 
-	<a href="<c:url value='/jsps/entity1/entity1read.jsp'/>" target="_parent">Read population entity</a> |&nbsp;
-	<a href="<c:url value='/jsps/entity1/entity1update.jsp'/>" target="_parent">Update population entity</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/entity1/entity1delete.jsp'/>" target="_parent">Delete population entity</a>	
+	<a href="<c:url value='/jsps/population/populationcreate.jsp'/>" target="_parent">Create population entity</a> |&nbsp; 
+	<a href="<c:url value='/jsps/population/populationread.jsp'/>" target="_parent">Read population entity</a> |&nbsp;
+	<a href="<c:url value='/jsps/population/populationupdate.jsp'/>" target="_parent">Update population entity</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/population/populationdelete.jsp'/>" target="_parent">Delete population entity</a>	
 	    
   </body>
 </html>

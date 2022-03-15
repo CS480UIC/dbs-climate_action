@@ -24,10 +24,10 @@
   <body>
     <h1>CRUD operations for state entity </h1>
     <br>
-	<a href="<c:url value='/jsps/entity1/entity1create.jsp'/>" target="_parent">Create state entity</a> |&nbsp; 
-	<a href="<c:url value='/jsps/entity1/entity1read.jsp'/>" target="_parent">Read state entity</a> |&nbsp;
-	<a href="<c:url value='/jsps/entity1/entity1update.jsp'/>" target="_parent">Update state entity</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/entity1/entity1delete.jsp'/>" target="_parent">Delete state entity</a>	
+	<a href="<c:url value='/jsps/state/statecreate.jsp'/>" target="_parent">Create state entity</a> |&nbsp; 
+	<a href="<c:url value='/jsps/state/stateread.jsp'/>" target="_parent">Read state entity</a> |&nbsp;
+	<a href="<c:url value='/jsps/state/stateupdate.jsp'/>" target="_parent">Update state entity</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/state/statedelete.jsp'/>" target="_parent">Delete state entity</a>	
 	    
   </body>
 </html>
