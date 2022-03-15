@@ -22,7 +22,7 @@
   
   <body>
   <h1>Delete Population</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/population_delete_output.jsp'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Delete population of state   :<input type="text" name="p_id" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>

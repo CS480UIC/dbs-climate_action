@@ -23,7 +23,7 @@
   <body>
   <h1>Read Population</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/population_read_output.jsp'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
 	State Code    :<input type="text" name="p_id" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
