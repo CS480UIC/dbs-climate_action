@@ -70,6 +70,24 @@ Our project is unique in a sense where we have all the information for each stat
 
 
 # CRUD for Deforestation
-Preview attachment CRUD_deforestation.jpg
+![CRUD_deforestation](https://user-images.githubusercontent.com/75382838/158704974-476103f7-4684-4b0f-8bb9-db2b49107e20.jpg)
 
-CRUD_deforestation.jpg
+![def_create](https://user-images.githubusercontent.com/75382838/158705084-835fcf4a-69d6-4779-a15d-9fbf75dc1b09.jpg)
+
+![def_read](https://user-images.githubusercontent.com/75382838/158705093-d7deb67c-3ea0-41d4-9165-f80c998b8317.jpg)
+
+![def_update](https://user-images.githubusercontent.com/75382838/158705105-98ca8986-a92c-471e-85e0-301c93a14c78.jpg)
+
+![def_delete](https://user-images.githubusercontent.com/75382838/158705116-849b2326-aea6-4b95-a6bf-188d6b82b930.jpg)
+
+
+# CRUD for AQI
+![CRUD_aqi](https://user-images.githubusercontent.com/75382838/158705140-7207dfac-9893-40c9-a43e-6a33b92b7869.jpg)
+
+![aqi_create](https://user-images.githubusercontent.com/75382838/158705152-2c1d26ae-d614-4b59-acad-2e5ffb6520f4.jpg)
+
+![aqi_read](https://user-images.githubusercontent.com/75382838/158705169-540188e1-6f2f-4e9a-8eb6-e6a11da29d83.jpg)
+
+![aqi_update](https://user-images.githubusercontent.com/75382838/158705193-998a914b-2ca6-425b-a3ec-d38f727d1983.jpg)
+
+![aqi_delete](https://user-images.githubusercontent.com/75382838/158705207-5ae6b2fa-64fa-4fe3-9ae2-bea860799496.jpg)
