@@ -18,4 +18,5 @@ We are planning to use MySQL for the backend and Java & PHP for the web developm
 Our project is unique in a sense where we have all the information for each state into one database and anyone can fetch the information for any state for a given year. After a lot of research, we could not find all the data at a single source. We had to collect our data from multiple resources and merge them.
 
 # Screenshots
+*index page
 ![crud-index page](C:\Users\draghu3\Desktop\Screenshots\mainpage.jpg)
