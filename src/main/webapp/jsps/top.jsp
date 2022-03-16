@@ -39,6 +39,8 @@
 			<a href="<c:url value='/jsps/user/regist.jsp'/>" target="_parent">Register</a> |&nbsp; 
 			<a href="<c:url value='/jsps/state/menu.jsp'/>" target="body">CRUD state</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/population/menu.jsp'/>" target="body">CRUD population</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/carbon_dioxide/menu.jsp'/>" target="body">CRUD carbon dioxide</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/natural_disaster/menu.jsp'/>" target="body">CRUD natural disaster</a> |&nbsp;&nbsp;
 	
 		</c:when>
 		<c:otherwise>
