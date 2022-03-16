@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Entity1 Create</title>
+    <title>aqi Create</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,21 +21,21 @@
   </head>
   
   <body>
-  <h1>Create a new entry for Natural Disaster</h1>
+  <h1>Create a new entry for AQI</h1>
 <form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	Disaster ID    :<input type="number" name="n_id" value="${form.n_id }"/>
+	AQI ID    :<input type="text" name="aqi_id" value="${form.n_id }"/>
 	<span style="color: red; font-weight: 900">${errors.n_id }</span>
 	<br/>
-	Disaster Name：<input type="text" name="disaster_name" value="${form.disaster_name }"/>
+	Measuring Year<input type="number" name="measuring_year" value="${form.disaster_name }"/>
 	<span style="color: red; font-weight: 900">${errors.disaster_name }</span>
 	<br/>
-	Year of Occurence	：<input type="number" name="occurence_year" value="${form.occurence_year }"/>
+	Value	：<input type="number" name="aqi_metric" value="${form.occurence_year }"/>
 	<span style="color: red; font-weight: 900">${errors.occurence_year }</span>
 	<br/>
-	Damage Costs	：<input type="number" name="damage_cost" value="${form.damage_cost }"/>
+	Reporting City	：<input type="text" name="reporting_city" value="${form.damage_cost }"/>
 	<span style="color: red; font-weight: 900">${errors.damage_cost }</span>
 	<br/>
-	<input type="submit" value="Create Natural Disaster"/>
+	<input type="submit" value="Create AQI"/>
 </form>
   </body>
 </html>

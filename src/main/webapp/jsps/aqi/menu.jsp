@@ -22,12 +22,12 @@
   </head>
   
   <body>
-    <h1>CRUD operations for natural_disaster </h1>
+    <h1>CRUD operations for AQI entity</h1>
     <br>
-	<a href="<c:url value='/jsps/natural_disaster/natural_disastercreate.jsp'/>" target="_parent">Create natural_disaster entity</a> |&nbsp; 
-	<a href="<c:url value='/jsps/natural_disaster/natural_disasterread.jsp'/>" target="_parent">Read natural_disaster entity</a> |&nbsp;
-	<a href="<c:url value='/jsps/natural_disaster/natural_disasterupdate.jsp'/>" target="_parent">Update natural_disaster entity</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/natural_disaster/natural_disasterdelete.jsp'/>" target="_parent">Delete natural_disaster entity</a>	
+	<a href="<c:url value='/jsps/aqi/aqicreate.jsp'/>" target="_parent">Create aqi entity</a> |&nbsp; 
+	<a href="<c:url value='/jsps/aqi/aqiread.jsp'/>" target="_parent">Read aqi entity</a> |&nbsp;
+	<a href="<c:url value='/jsps/aqi/aqiupdate.jsp'/>" target="_parent">Update aqi entity</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/aqi/aqidelete.jsp'/>" target="_parent">Delete aqi entity</a>	
 	    
   </body>
 </html>

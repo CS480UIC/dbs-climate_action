@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Natural Disaster</title>
+    <title>Read AQI Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,22 +21,19 @@
   </head>
   
   <body>
-  <h1>Delete Natural Disaster</h1>
+  <h1>Read AQI Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${entity1.username }"/>
-	Disaster ID   :<input type="number" name="n_id" value="${entity1.username }" disabled/>
+<form>
+	AQI ID   :<input type="text" name="aqi_id" value="${entity1.username }" disabled/>
 	<br/>
-	
-	Disaster Name：<input type="text" name="disaster_name" value="${entity1.password }" disabled/>
+	Measuring Year：<input type="number" name="measuring_year" value="${entity1.password }" disabled/>
 	<br/>
-	Year of Occurence	：<input type="number" name="occurence_year" value="${entity1.email }" disabled/>
+	Value	：<input type="text" name="aqi_metric" value="${entity1.email }" disabled/>
 	<br/>
-	Damage Costs	：<input type="number" name="damage_cost" value="${entity1.email }" disabled/>
+	Reporting City	：<input type="text" name="reporting_city" value="${entity1.email }" disabled/>
 	<br/>
-	<input type="submit" value="Delete Natural Disaster"/>
 </form>
 
+<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
 </body>
 </html>

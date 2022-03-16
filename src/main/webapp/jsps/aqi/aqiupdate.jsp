@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update Natural Disaster</title>
+    <title>Update AQI</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,13 @@
   </head>
   
   <body>
-  <h1>Update</h1>
-<form action="<c:url value='natural_disaster_update_output.jsp'/>" method="post">
+  <h1>Update AQI</h1>
+<form action="<c:url value='aqi_update_output.jsp'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update Disaster ID   :<input type="text" name="n_id" value="${form.username }"/>
+	Update AQI ID   :<input type="text" name="aqi_id" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-	<input type="submit" value="Update Natural Disaster"/>
+	<input type="submit" value="Update AQI"/>
 </form>
   </body>
 </html>

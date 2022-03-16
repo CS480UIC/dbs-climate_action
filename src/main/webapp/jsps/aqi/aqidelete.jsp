@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Natural Disaster entity</title>
+    <title>Delete AQI entity</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,13 @@
   </head>
   
   <body>
-  <h1>Delete Natural Disaster entity</h1>
-<form action="<c:url value='natural_disaster_delete_output.jsp'/>" method="post">
+  <h1>Delete AQI entity</h1>
+<form action="<c:url value='aqi_delete_output.jsp'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Natural Disaster   :<input type="text" name="n_id" value="${form.username }"/>
+	AQI ID   :<input type="text" name="aqi_id" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-	<input type="submit" value="Delete Natural Disaster entity"/>
+	<input type="submit" value="Delete AQI entity"/>
 </form>
   </body>
 </html>

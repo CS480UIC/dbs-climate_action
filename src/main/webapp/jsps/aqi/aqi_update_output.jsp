@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Natural Disaster</title>
+    <title>Update AQI</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,20 +21,31 @@
   </head>
   
   <body>
-  <h1>Read Natural Disaster</h1>
+  <h1>Update AQI Entity</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='natural_disaster_read_output.jsp'/>" method="post">
-	<input type="hidden" name="method" value="regist"/>
-	Disaster ID   :<input type="text" name="n_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form>
+	AQI ID    :<input type="text" name="aqi_id1" value="${entity1.username }" disabled/>
 	<br/>
-<%-- 	Password：<input type="password" name="password" value="${form.password }"/>
+	
+	Measuring Year：<input type="number" name="measuring_year1" value="${entity1.password }" disabled />
+	<br/>
+	Value	：<input type="number" name="aqi_metric1" value="${entity1.email }" disabled/>
+	<br/>
+	Reporting City	：<input type="text" name="reporting_city1" value="${entity1.email }" disabled/>
+	<br/>
+</form>
+<h1>Update the values below</h1>
+<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+		<input type="hidden" name="method" value="update"/>
+				<input type="hidden" name="username" value="${entity1.username }"/>
+	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
 	<br/>
 	Email	：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/> --%>
-	<input type="submit" value="Read Natural Disaster"/>
+	<br/>
+	<input type="submit" value="Update Entity1"/>
 </form>
-  </body>
+
+</body>
 </html>
