@@ -21,7 +21,7 @@ Our project is unique in a sense where we have all the information for each stat
 # Main Page
  ![mainpage](https://user-images.githubusercontent.com/42165851/158509902-651046c9-a296-468a-a490-51b16f0368d0.jpg)
 # CRUD for State
-![CRUD_State](https://user-images.![state_create](https://user-images.githubusercontent.com/42165851/158510234-d8748e21-c688-4c52-b30a-d1eee03a9919.jpg)
+![CRUD_State](https://user-images.githubusercontent.com/42165851/158510643-ebc0b15a-1bc4-47a4-b863-97227ab564a8.jpg)
 
 ![state_create](https://user-images.githubusercontent.com/42165851/158510292-32df0803-c665-4d3f-8d96-8a6de568946a.jpg)
 
@@ -33,9 +33,9 @@ Our project is unique in a sense where we have all the information for each stat
 
 
 
-#CRUD for Population
+# CRUD for Population
 ![CRUD_population](https://user-images.githubusercontent.com/42165851/158509921-7305930f-c1d0-4432-9507-4b59ad0ad079.jpg)
-#CRUD for Natural Disaster
+# CRUD for Natural Disaster
 ![CRUD_disaster](https://user-images.githubusercontent.com/42165851/158509925-bfd3ada6-4973-4c0f-b5b3-f56262fd1ca9.jpg)
-#CRUD for Carbon-di-oxide
+# CRUD for Carbon-di-oxide
 ![CRUD_CO2](https://user-images.githubusercontent.com/42165851/158509928-83675380-aa39-4fdf-89e6-404ea6c025cb.jpg)
