@@ -69,4 +69,7 @@ Our project is unique in a sense where we have all the information for each stat
 ![co2_delete](https://user-images.githubusercontent.com/42165851/158514832-1439765b-3631-49d6-96e8-c48a4298473d.jpg)
 
 
+# CRUD for Deforestation
+Preview attachment CRUD_deforestation.jpg
 
+CRUD_deforestation.jpg
