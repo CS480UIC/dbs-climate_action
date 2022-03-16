@@ -45,7 +45,7 @@ Our project is unique in a sense where we have all the information for each stat
 ![pop_delete](https://user-images.githubusercontent.com/42165851/158514721-fb6e7015-2522-4707-94a3-43f528887a4b.jpg)
 
 
-# CRUD for Natural Disaster
+# CRUD for Natural_Disaster
 ![CRUD_disaster](https://user-images.githubusercontent.com/42165851/158509925-bfd3ada6-4973-4c0f-b5b3-f56262fd1ca9.jpg)
 
 ![disaster_create](https://user-images.githubusercontent.com/42165851/158514746-140eb2da-0704-4e78-a45e-0194d8c23990.jpg)
