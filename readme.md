@@ -19,4 +19,9 @@ Our project is unique in a sense where we have all the information for each stat
 
 # Screenshots
 *index page
-![crud-index page](C:\Users\draghu3\Desktop\Screenshots\mainpage.jpg)
+ ![mainpage](https://user-images.githubusercontent.com/42165851/158509902-651046c9-a296-468a-a490-51b16f0368d0.jpg)
+*CRUD State
+ ![CRUD_State](https://user-images.githubusercontent.com/42165851/158509914-49e7d856-776e-49fd-b5c5-024300e51a8a.jpg)
+![CRUD_population](https://user-images.githubusercontent.com/42165851/158509921-7305930f-c1d0-4432-9507-4b59ad0ad079.jpg)
+![CRUD_disaster](https://user-images.githubusercontent.com/42165851/158509925-bfd3ada6-4973-4c0f-b5b3-f56262fd1ca9.jpg)
+![CRUD_CO2](https://user-images.githubusercontent.com/42165851/158509928-83675380-aa39-4fdf-89e6-404ea6c025cb.jpg)
