@@ -35,7 +35,38 @@ Our project is unique in a sense where we have all the information for each stat
 
 # CRUD for Population
 ![CRUD_population](https://user-images.githubusercontent.com/42165851/158509921-7305930f-c1d0-4432-9507-4b59ad0ad079.jpg)
+
+![pop_create](https://user-images.githubusercontent.com/42165851/158514680-f7c635fe-f981-408a-bac1-acf845f3f575.jpg)
+
+![pop_read](https://user-images.githubusercontent.com/42165851/158514699-739cfe1e-ebe3-4b4b-ae4b-2a083f63f6bb.jpg)
+
+![pop_update](https://user-images.githubusercontent.com/42165851/158514707-efe4fbf9-a1db-40ce-a1b9-a1d58fdc38d4.jpg)
+
+![pop_delete](https://user-images.githubusercontent.com/42165851/158514721-fb6e7015-2522-4707-94a3-43f528887a4b.jpg)
+
+
 # CRUD for Natural Disaster
 ![CRUD_disaster](https://user-images.githubusercontent.com/42165851/158509925-bfd3ada6-4973-4c0f-b5b3-f56262fd1ca9.jpg)
+
+![disaster_create](https://user-images.githubusercontent.com/42165851/158514746-140eb2da-0704-4e78-a45e-0194d8c23990.jpg)
+
+![disaster_read](https://user-images.githubusercontent.com/42165851/158514755-603af775-bf4f-449d-8650-767aac216e41.jpg)
+
+![disaster_update](https://user-images.githubusercontent.com/42165851/158514771-6ac0b7ad-b95c-4390-a572-ac8f0894cd90.jpg)
+
+![disaster_delete](https://user-images.githubusercontent.com/42165851/158514779-6030d20b-0fdb-4696-baa6-556a5210747b.jpg)
+
+
 # CRUD for Carbon-di-oxide
 ![CRUD_CO2](https://user-images.githubusercontent.com/42165851/158509928-83675380-aa39-4fdf-89e6-404ea6c025cb.jpg)
+
+![co2_create](https://user-images.githubusercontent.com/42165851/158514797-eb761006-8eed-454f-912e-b634258614e4.jpg)
+
+![co2_read](https://user-images.githubusercontent.com/42165851/158514816-e69dad02-ebbc-44fc-8506-9a936682a20a.jpg)
+
+![co2_update](https://user-images.githubusercontent.com/42165851/158514822-2c863f11-e488-4350-943a-333c1bedeac5.jpg)
+
+![co2_delete](https://user-images.githubusercontent.com/42165851/158514832-1439765b-3631-49d6-96e8-c48a4298473d.jpg)
+
+
+
