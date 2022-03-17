@@ -83,12 +83,4 @@ Our project is unique in a sense where we have all the information for each stat
 
 
 # CRUD for AQI
-![CRUD_aqi](https://user-images.githubusercontent.com/75382838/158705140-7207dfac-9893-40c9-a43e-6a33b92b7869.jpg)
 
-![aqi_create](https://user-images.githubusercontent.com/75382838/158705152-2c1d26ae-d614-4b59-acad-2e5ffb6520f4.jpg)
-
-![aqi_read](https://user-images.githubusercontent.com/75382838/158705169-540188e1-6f2f-4e9a-8eb6-e6a11da29d83.jpg)
-
-![aqi_update](https://user-images.githubusercontent.com/75382838/158705193-998a914b-2ca6-425b-a3ec-d38f727d1983.jpg)
-
-![aqi_delete](https://user-images.githubusercontent.com/75382838/158705207-5ae6b2fa-64fa-4fe3-9ae2-bea860799496.jpg)
