@@ -83,4 +83,5 @@ Our project is unique in a sense where we have all the information for each stat
 
 
 # CRUD for AQI
+![CRUD_aqi](https://user-images.githubusercontent.com/75382838/158717020-aaff4ea7-f246-4d2b-a425-4987067ded5d.jpg)
 
