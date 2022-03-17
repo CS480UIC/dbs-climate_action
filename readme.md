@@ -73,6 +73,7 @@ Our project is unique in a sense where we have all the information for each stat
 # CRUD for Deforestation
 ![CRUD_deforestation](https://user-images.githubusercontent.com/75382838/158704974-476103f7-4684-4b0f-8bb9-db2b49107e20.jpg)
 
+![def_create](https://user-images.githubusercontent.com/75382838/158717708-01908d21-1aab-496c-bfcf-625119740244.jpg)
 
 
 
