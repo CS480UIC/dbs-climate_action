@@ -73,13 +73,7 @@ Our project is unique in a sense where we have all the information for each stat
 # CRUD for Deforestation
 ![CRUD_deforestation](https://user-images.githubusercontent.com/75382838/158704974-476103f7-4684-4b0f-8bb9-db2b49107e20.jpg)
 
-![def_create](https://user-images.githubusercontent.com/75382838/158705084-835fcf4a-69d6-4779-a15d-9fbf75dc1b09.jpg)
 
-![def_read](https://user-images.githubusercontent.com/75382838/158705093-d7deb67c-3ea0-41d4-9165-f80c998b8317.jpg)
-
-![def_update](https://user-images.githubusercontent.com/75382838/158705105-98ca8986-a92c-471e-85e0-301c93a14c78.jpg)
-
-![def_delete](https://user-images.githubusercontent.com/75382838/158705116-849b2326-aea6-4b95-a6bf-188d6b82b930.jpg)
 
 
 # CRUD for AQI
