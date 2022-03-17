@@ -19,7 +19,8 @@ Our project is unique in a sense where we have all the information for each stat
 
 # Screenshots
 # Main Web Page
- ![mainpage](https://user-images.githubusercontent.com/42165851/158509902-651046c9-a296-468a-a490-51b16f0368d0.jpg)
+![main webpage](https://user-images.githubusercontent.com/75382838/158716900-4d0d9e29-e255-4d4d-8382-1fbd11317a12.JPG)
+
 # CRUD for State
 ![CRUD_State](https://user-images.githubusercontent.com/42165851/158510643-ebc0b15a-1bc4-47a4-b863-97227ab564a8.jpg)
 
