@@ -48,7 +48,12 @@
 			Hello：${sessionScope.session_user.username };
 			<a href="<c:url value='/jsps/user/queries.jsp'/>" target="body">Query Result</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
-			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">CRUD entity 1</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/state/menu.jsp'/>" target="body">CRUD state</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/population/menu.jsp'/>" target="body">CRUD population</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/carbon_dioxide/menu.jsp'/>" target="body">CRUD carbon dioxide</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/natural_disaster/menu.jsp'/>" target="body">CRUD natural disaster</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/deforestation/menu.jsp'/>" target="body">CRUD deforestation</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/aqi/menu.jsp'/>" target="body">CRUD aqi</a> |&nbsp;&nbsp;
 
 		</c:otherwise>
 	</c:choose>
