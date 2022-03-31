@@ -1,0 +1,6 @@
+n_id,disaster_name,occurence_year,damage_cost
+01,Tornado,2021,3.9
+02,Wildfire,2017,0.015
+03,Hurricane,2011,14.2
+04,Earthquake,2019,5.3
+05,Flood,2017,91.61
