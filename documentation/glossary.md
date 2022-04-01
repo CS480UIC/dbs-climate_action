@@ -86,6 +86,7 @@ This relationship show that a state can cause deforestation.
 
 --area INTEGER UNSIGNED NOT NULL
 
+
 ### population
 --p_id VARCHAR (3) UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
 
@@ -104,34 +105,37 @@ This relationship show that a state can cause deforestation.
  --reporting_city VARCHAR(20) NOT NULL PRIMARY KEY
  
  --reporting_date DATE NOT NULL
+ 
   
  ### carbon_dioxide
- --co_id INTEGER UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
+ --co_id VARCHAR (3) UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
   
  --emission_year INTEGER NOT NULL PRIMARY KEY
   
- --co_metric DECIMAL(3,2) NOT NULL
+ --co_metric DECIMAL(6,2) NOT NULL
+ 
   
   ### natural_disaster
   --n_id INTEGER UNIQUE NOT NULL PRIMARY KEY
   
   --disaster_name VARCHAR(20) NOT NULL
 
-  --occurence_year INTEGER NOT NULL
+  --occurence_date DATE NOT NULL
 
-  --damage_cost DECIMAL (3,2) NOT NULL
+  --damage_cost DECIMAL (8,3) NOT NULL
+  
   
   ### state_natural_disaster
-  --code UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
+  --code VARCHAR (3) UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
   
-  --n_id UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
+  --n_id INTEGER UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
 
 ### deforestation
- --def_id INTEGER UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
+ --def_id VARCHAR (3) UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
 
  --year INTEGER NOT NULL PRIMARY KEY
  
- --def_metric DECIMAL (3,2) NOT NULL
+ --def_metric DECIMAL (10,2) NOT NULL
  
 # Dependent entities and dependency relationships:
  -- state is independent
