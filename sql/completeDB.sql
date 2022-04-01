@@ -104,7 +104,7 @@ damage_cost DECIMAL(8,3) NOT NULL,
 PRIMARY KEY(n_id)
 );
 
-INSERT INTO `natural_disaster` VALUES 
+INSERT INTO natural_disaster VALUES 
     (1,'tornado','2021-12-10',3.900),
     (2,'earthquake','2019-07-04',5.300),
     (3,'hurricane','2021-06-30',65.250),
@@ -122,6 +122,13 @@ FOREIGN KEY(n_id) REFERENCES natural_disaster(n_id)
 ON DELETE CASCADE
 ON UPDATE CASCADE
 );
+
+INSERT INTO state_natural_disaster VALUES 
+    ('IL',1),
+    ('AZ',2),
+    ('NV',2),
+    ('NY',3),
+    ('FL',4);
 
 CREATE TABLE user(
 username VARCHAR(50) primary key,
