@@ -15,7 +15,8 @@ WHERE def_metric > 10000 ORDER BY def_id;
 
 /* 7.2 */
 SELECT emission_year, AVG(co_metric) AS avg_metric
-FROM carbon_dioxide GROUP BY emission_year HAVING avg_metric>100;
+FROM carbon_dioxide 
+GROUP BY emission_year HAVING avg_metric>100;
 
 SELECT concat(aqi_id,"_",reporting_city) AS func_example,aqi_metric 
 from aqi;
