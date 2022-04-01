@@ -87,11 +87,11 @@ This relationship show that a state can cause deforestation.
 --area INTEGER UNSIGNED NOT NULL
 
 ### population
---p_id INTEGER UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
+--p_id VARCHAR (3) UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
 
 --recorded_year INTEGER NOT NULL PRIMARY KEY
 
---p_value INTEGER NOT NULL
+--p_value INTEGER UNSIGNED NOT NULL
 
 
  ### aqi
