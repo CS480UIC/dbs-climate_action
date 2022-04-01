@@ -126,9 +126,9 @@ This relationship show that a state can cause deforestation.
   
   
   ### state_natural_disaster
-  --code UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
+  --code VARCHAR (3) UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
   
-  --n_id UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
+  --n_id INTEGER UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
 
 ### deforestation
  --def_id INTEGER UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
