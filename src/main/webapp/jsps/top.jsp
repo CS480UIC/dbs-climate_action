@@ -37,12 +37,6 @@
 		<c:when test="${empty sessionScope.session_user }">
 			<a href="<c:url value='/jsps/user/login.jsp'/>" target="_parent">Login</a> |&nbsp; 
 			<a href="<c:url value='/jsps/user/regist.jsp'/>" target="_parent">Register</a> |&nbsp; 
-			<a href="<c:url value='/jsps/state/menu.jsp'/>" target="body">CRUD state</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/population/menu.jsp'/>" target="body">CRUD population</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/carbon_dioxide/menu.jsp'/>" target="body">CRUD carbon dioxide</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/natural_disaster/menu.jsp'/>" target="body">CRUD natural disaster</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/deforestation/menu.jsp'/>" target="body">CRUD deforestation</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/aqi/menu.jsp'/>" target="body">CRUD aqi</a> |&nbsp;&nbsp;
 		</c:when>
 		<c:otherwise>
 			Hello：${sessionScope.session_user.username };
