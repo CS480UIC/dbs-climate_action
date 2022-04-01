@@ -104,13 +104,14 @@ This relationship show that a state can cause deforestation.
  --reporting_city VARCHAR(20) NOT NULL PRIMARY KEY
  
  --reporting_date DATE NOT NULL
+ 
   
  ### carbon_dioxide
- --co_id INTEGER UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
+ --co_id VARCHAR (3) UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
   
  --emission_year INTEGER NOT NULL PRIMARY KEY
   
- --co_metric DECIMAL(3,2) NOT NULL
+ --co_metric DECIMAL(6,2) NOT NULL
   
   ### natural_disaster
   --n_id INTEGER UNIQUE NOT NULL PRIMARY KEY
