@@ -95,13 +95,15 @@ This relationship show that a state can cause deforestation.
 
 
  ### aqi
- --aqi_id INTEGER UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
+ --aqi_id VARCHAR (3) UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
   
  --measuring_year INTEGER NOT NULL PRIMARY KEY
   
- --aqi_metric DECIMAL(4,2) NOT NULL
+ --aqi_metric INTEGER NOT NULL
  
- --reproting_city VARCHAR(4,2) NOT NULL PRIMARY KEY
+ --reporting_city VARCHAR(20) NOT NULL PRIMARY KEY
+ 
+ --reporting_date DATE NOT NULL
   
  ### carbon_dioxide
  --co_id INTEGER UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
