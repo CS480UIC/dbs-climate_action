@@ -70,6 +70,13 @@ ON DELETE CASCADE
 ON UPDATE CASCADE
 );
 
+INSERT INTO carbon_dioxide VALUES 
+    ('AZ',2017,85.60),
+    ('FL',2017,226.60),
+    ('IL',2017,201.10),
+    ('NV',2017,36.20),
+    ('NY',2017,156.70);
+
 CREATE TABLE aqi(
 aqi_id VARCHAR(3) UNIQUE NOT NULL,
 measuring_year INT NOT NULL,
