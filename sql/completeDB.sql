@@ -89,6 +89,13 @@ ON DELETE CASCADE
 ON UPDATE CASCADE
 );
 
+INSERT INTO aqi VALUES 
+    ('AZ',2020,53,'Tuscon','2020-11-21'),
+    ('FL',2019,43,'Jacksonville','2019-03-15'),
+    ('IL',2020,41,'Bloomington','2020-08-15'),
+    ('NV',2018,48,'Reno','2018-06-29'),
+    ('NY',2018,54,'NewYork','2018-05-10');
+
 CREATE TABLE natural_disaster(
 n_id INT UNIQUE NOT NULL,
 disaster_name VARCHAR(20) NOT NULL,
