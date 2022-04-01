@@ -136,7 +136,7 @@ password VARCHAR(50) NOT NULL,
 email VARCHAR(50) NOT NULL
 );
 
-INSERT INTO `user` VALUES 
+INSERT INTO user VALUES 
     ('draghu3','12345','draghu3@uic.edu'),
     ('jega2','54321','jega2@uic.edu'),
     ('onurag1','qwerty','onurag1@uic.edu'),
@@ -147,6 +147,12 @@ username VARCHAR(50) primary key,
 password VARCHAR(50) NOT NULL,
 email VARCHAR(50) NOT NULL
 );
+
+INSERT INTO entity VALUES 
+    ('draghu3','12345','draghu3@uic.edu'),
+    ('jega2','54321','jega2@uic.edu'),
+    ('onurag1','qwerty','onurag1@uic.edu'),
+    ('sayush2','abcde','sayush@uic.edu');
 
 /* queries.sql */
 /* 7.1 */
