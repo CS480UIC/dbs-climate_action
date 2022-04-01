@@ -80,11 +80,11 @@ This relationship show that a state can cause deforestation.
 # Attribute Data Types
 
 ### state
---name VARCHAR UNIQUE NOT NULL
+--name VARCHAR (20) UNIQUE NOT NULL
 
---code VARCHAR UNIQUE NOT NULL PRIMARY KEY
+--code VARCHAR (3) UNIQUE NOT NULL PRIMARY KEY
 
---area DECIMAL(4,2) NOT NULL
+--area INTEGER UNSIGNED NOT NULL
 
 ### population
 --p_id INTEGER UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
