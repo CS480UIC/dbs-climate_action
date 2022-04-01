@@ -131,11 +131,11 @@ This relationship show that a state can cause deforestation.
   --n_id INTEGER UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
 
 ### deforestation
- --def_id INTEGER UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
+ --def_id VARCHAR (3) UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
 
  --year INTEGER NOT NULL PRIMARY KEY
  
- --def_metric DECIMAL (3,2) NOT NULL
+ --def_metric DECIMAL (10,2) NOT NULL
  
 # Dependent entities and dependency relationships:
  -- state is independent
