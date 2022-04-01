@@ -25,7 +25,6 @@
   </servlet-mapping>
   
   
-  
     <servlet>
     <description></description>
     <display-name>Entity1ServletUpdate</display-name>
@@ -49,7 +48,7 @@
     <url-pattern>/Entity1ServletDelete</url-pattern>
   </servlet-mapping>
   
-  <servlet>
+  	<servlet>
     <description></description>
     <display-name>UserServletRegister</display-name>
     <servlet-name>UserServletRegister</servlet-name>
@@ -59,6 +58,20 @@
     <servlet-name>UserServletRegister</servlet-name>
     <url-pattern>/UserServletRegister</url-pattern>
   </servlet-mapping>
+  
+   
+    <servlet>
+    <description></description>
+    <display-name>InitializeDB</display-name>
+    <servlet-name>InitializeDB</servlet-name>
+    <servlet-class>init.web.servlet.InitializeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitializeDB</servlet-name>
+    <url-pattern>/InitializeDB</url-pattern>
+  </servlet-mapping>
+  
+  
   <servlet>
     <description></description>
     <display-name>UserServletLogin</display-name>
