@@ -18,7 +18,7 @@
 --
 -- Table structure for table `aqi`
 --
-
+use database climate_change;
 DROP TABLE IF EXISTS `aqi`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
