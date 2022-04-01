@@ -19,6 +19,13 @@ area INT UNSIGNED NOT NULL,
 PRIMARY KEY(code)
 );
 
+INSERT INTO state VALUES 
+    ('AZ','Arizona',113998),
+    ('FL','Florida',65758),
+    ('IL','Illinois',57915),
+    ('NV','Nevada',110567),
+    ('NY','New York',54556);
+
 CREATE TABLE population(
 p_id VARCHAR(3) UNIQUE NOT NULL,
 recorded_year INT NOT NULL,
