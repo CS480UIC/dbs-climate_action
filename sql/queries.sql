@@ -1,7 +1,8 @@
 /* 7.1 */
 SELECT *
 FROM population
-WHERE p_id= 'IL' AND recorded_year=2020 ORDER BY p_value;
+WHERE p_id= 'IL' AND recorded_year = 2020 
+ORDER BY p_value;
 
 SELECT *
 FROM natural_disaster
