@@ -31,7 +31,7 @@ LEFT JOIN deforestation AS d
 ON p.p_id=d.def_id;
 
 SELECT * FROM population 
-WHERE p_id IN  (SELECT CODE FROM state WHERE area>100000);
+WHERE p_id IN (SELECT CODE FROM state WHERE area>100000);
 
 SELECT p_id FROM
 population AS p
