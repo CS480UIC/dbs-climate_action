@@ -1,15 +1,18 @@
 package init.dao;
 
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import java.util.ArrayList;
-import java.util.List;
 
-import user.domain.User;
+
+import org.apache.ibatis.jdbc.ScriptRunner;
+
+
 
 
 
@@ -30,15 +33,20 @@ public class InitDao {
 	
 	
 
-	public void initlaize() throws ClassNotFoundException {
+	public void initlaize(InputStream input) throws ClassNotFoundException {
 		// TODO Auto-generated method stub
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
 			
-			String sql = "create table test (id int)";
-			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.executeUpdate();
+			//Initialize the script runner
+	   		 ScriptRunner sr = new ScriptRunner(connect);
+	   		 //Creating a reader object
+	   		 Reader reader = new InputStreamReader(input);
+	   		 //Running the script
+	   		 sr.runScript(reader);
+
+
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);

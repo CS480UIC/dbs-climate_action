@@ -1,10 +1,7 @@
 package init.web.servlet;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.io.InputStream;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -13,9 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import init.service.InitException;
 import init.service.InitService;
-import user.domain.User;
-import user.service.UserException;
-import user.service.UserService;
+
 
 /**
  * Servlet implementation class UserServlet
@@ -43,8 +38,11 @@ public class InitializeServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		InitService initservice = new InitService();
+		//Read the file from webapp/sql
+		InputStream input = getServletContext().getResourceAsStream("/sql/initializeDB.sql");
+
 		try {
-			initservice.initializeDB();
+			initservice.initializeDB(input);
 			response.sendRedirect( request.getContextPath() + "/jsps/user/login.jsp");
 		} catch (ClassNotFoundException | InitException e) {
 			e.printStackTrace();
