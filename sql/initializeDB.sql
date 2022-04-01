@@ -133,7 +133,7 @@ DROP TABLE IF EXISTS `natural_disaster`;
 CREATE TABLE `natural_disaster` (
   `n_id` int NOT NULL,
   `disaster_name` varchar(20) NOT NULL,
-  `occurence_year` int NOT NULL,
+  `occurence_date` date NOT NULL,
   `damage_cost` decimal(8,3) NOT NULL,
   PRIMARY KEY (`n_id`),
   UNIQUE KEY `n_id` (`n_id`)
@@ -146,7 +146,7 @@ CREATE TABLE `natural_disaster` (
 
 LOCK TABLES `natural_disaster` WRITE;
 /*!40000 ALTER TABLE `natural_disaster` DISABLE KEYS */;
-INSERT INTO `natural_disaster` VALUES (1,'Tornado',2021,3.900),(2,'Wildfire',2017,0.015),(3,'Hurricane',2011,14.200),(4,'Earthquake',2019,5.300),(5,'Flood',2017,91.610);
+INSERT INTO `natural_disaster` VALUES (1,'tornado','2021-12-10',3.900),(2,'earthquake','2019-07-04',5.300),(3,'hurricane','2021-06-30',65.250),(4,'hurricane','2019-08-24',5.100),(5,'wildfire','2018-11-08',26.340);
 /*!40000 ALTER TABLE `natural_disaster` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -205,6 +205,34 @@ INSERT INTO `state` VALUES ('AZ','Arizona',113998),('FL','Florida',65758),('IL',
 UNLOCK TABLES;
 
 --
+-- Table structure for table `state_natural_disaster`
+--
+
+DROP TABLE IF EXISTS `state_natural_disaster`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `state_natural_disaster` (
+  `code` varchar(3) NOT NULL,
+  `n_id` int NOT NULL,
+  PRIMARY KEY (`code`,`n_id`),
+  UNIQUE KEY `code` (`code`),
+  KEY `n_id` (`n_id`),
+  CONSTRAINT `state_natural_disaster_ibfk_1` FOREIGN KEY (`code`) REFERENCES `state` (`code`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `state_natural_disaster_ibfk_2` FOREIGN KEY (`n_id`) REFERENCES `natural_disaster` (`n_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `state_natural_disaster`
+--
+
+LOCK TABLES `state_natural_disaster` WRITE;
+/*!40000 ALTER TABLE `state_natural_disaster` DISABLE KEYS */;
+INSERT INTO `state_natural_disaster` VALUES ('IL',1),('AZ',2),('NV',2),('NY',3),('FL',4);
+/*!40000 ALTER TABLE `state_natural_disaster` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `user`
 --
 
@@ -238,4 +266,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-31 14:56:30
+-- Dump completed on 2022-03-31 21:22:10

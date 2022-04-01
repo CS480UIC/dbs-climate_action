@@ -80,28 +80,30 @@ This relationship show that a state can cause deforestation.
 # Attribute Data Types
 
 ### state
---name VARCHAR UNIQUE NOT NULL
+--name VARCHAR (20) UNIQUE NOT NULL
 
---code VARCHAR UNIQUE NOT NULL PRIMARY KEY
+--code VARCHAR (3) UNIQUE NOT NULL PRIMARY KEY
 
---area DECIMAL(4,2) NOT NULL
+--area INTEGER UNSIGNED NOT NULL
 
 ### population
---p_id INTEGER UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
+--p_id VARCHAR (3) UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
 
 --recorded_year INTEGER NOT NULL PRIMARY KEY
 
---p_value INTEGER NOT NULL
+--p_value INTEGER UNSIGNED NOT NULL
 
 
  ### aqi
- --aqi_id INTEGER UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
+ --aqi_id VARCHAR (3) UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
   
  --measuring_year INTEGER NOT NULL PRIMARY KEY
   
- --aqi_metric DECIMAL(4,2) NOT NULL
+ --aqi_metric INTEGER NOT NULL
  
- --reproting_city VARCHAR(4,2) NOT NULL PRIMARY KEY
+ --reporting_city VARCHAR(20) NOT NULL PRIMARY KEY
+ 
+ --reporting_date DATE NOT NULL
   
  ### carbon_dioxide
  --co_id INTEGER UNIQUE NOT NULL PRIMARY KEY, FOREIGN KEY
