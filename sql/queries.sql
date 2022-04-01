@@ -6,7 +6,8 @@ ORDER BY p_value;
 
 SELECT *
 FROM natural_disaster
-WHERE disaster_name='Tornado' ORDER BY damage_cost;
+WHERE disaster_name='Tornado' 
+ORDER BY damage_cost;
 
 SELECT *
 FROM deforestation
