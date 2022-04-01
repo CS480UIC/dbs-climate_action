@@ -104,6 +104,13 @@ damage_cost DECIMAL(8,3) NOT NULL,
 PRIMARY KEY(n_id)
 );
 
+INSERT INTO `natural_disaster` VALUES 
+    (1,'tornado','2021-12-10',3.900),
+    (2,'earthquake','2019-07-04',5.300),
+    (3,'hurricane','2021-06-30',65.250),
+    (4,'hurricane','2019-08-24',5.100),
+    (5,'wildfire','2018-11-08',26.340);
+
 CREATE TABLE state_natural_disaster(
 code VARCHAR(3) UNIQUE NOT NULL,
 n_id INT NOT NULL,
