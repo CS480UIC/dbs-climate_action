@@ -53,6 +53,13 @@ ON DELETE CASCADE
 ON UPDATE CASCADE
 );
 
+INSERT INTO deforestation VALUES 
+    ('AZ',2020,18744.44),
+    ('FL',2020,0.24),
+    ('IL',2020,382.14),
+    ('NV',2020,272.79),
+    ('NY',2020,3310.15);
+
 CREATE TABLE carbon_dioxide(
 co_id VARCHAR(3) UNIQUE NOT NULL,
 emission_year INT NOT NULL,
