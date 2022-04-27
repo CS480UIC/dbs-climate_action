@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import state.domain.Book;
+import state.domain.State;
 import state.service.StateException;
 import state.service.StateService;
 
@@ -42,7 +42,7 @@ public class StateServletCreate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		StateService entity1service = new StateService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		Book form = new Book();
+		State form = new State();
 		List<String> info = new ArrayList<String>();
 
 		for(String name : paramMap.keySet()) {

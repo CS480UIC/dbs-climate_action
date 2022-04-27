@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import state.dao.StateDao;
-import state.domain.Book;
+import state.domain.State;
 
 /**
  * Servlet implementation class UserServlet
@@ -41,7 +41,7 @@ public class StateServletUpdate extends HttpServlet {
 
 		String method = request.getParameter("method");
 		StateDao entity1dao = new StateDao();
-		Book entity1 = null;
+		State entity1 = null;
 
 		if(method.equals("search"))
 		{
@@ -68,7 +68,7 @@ public class StateServletUpdate extends HttpServlet {
 		else if(method.equals("update"))
 		{
 			Map<String,String[]> paramMap = request.getParameterMap();
-			Book form = new Book();
+			State form = new State();
 			List<String> info = new ArrayList<String>();
 
 			for(String name : paramMap.keySet()) {

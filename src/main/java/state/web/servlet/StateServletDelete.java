@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import state.dao.StateDao;
-import state.domain.Book;
+import state.domain.State;
 
 
 /**
@@ -37,7 +37,7 @@ public class StateServletDelete extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
 		StateDao entity1Dao = new StateDao();
-		Book entity1 = null;
+		State entity1 = null;
 		if(method.equals("search"))
 		{
 			try {

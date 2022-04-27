@@ -12,7 +12,7 @@ import java.sql.SQLException;
 //import java.util.ArrayList;
 //import java.util.List;
 
-import state.domain.Book;
+import state.domain.State;
 
 /**
  * DDL functions performed in database
@@ -29,8 +29,8 @@ public class StateDao {
 	 */
 	private String MySQL_password = "jega2rox"; //TODO change password
 
-	public Book findByUsername(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Book entity1 = new Book();
+	public State findByUsername(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		State entity1 = new State();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
@@ -62,7 +62,7 @@ public class StateDao {
 	 * @throws InstantiationException 
 	 */
 	
-	public void add(Book form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void add(State form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
@@ -86,7 +86,7 @@ public class StateDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void update(Book form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void update(State form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);

@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import state.dao.StateDao;
-import state.domain.Book;
+import state.domain.State;
 
 
 /**
@@ -37,7 +37,7 @@ public class StateServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Book entity1 = null;
+		State entity1 = null;
 		StateDao entity1Dao = new StateDao();
 		
 		try {
