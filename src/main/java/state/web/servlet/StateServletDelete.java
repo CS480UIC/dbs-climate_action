@@ -6,21 +6,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.dao.Entity1Dao;
-import entity1.domain.Entity1;
+import state.dao.StateDao;
+import state.domain.Book;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletDelete extends HttpServlet {
+public class StateServletDelete extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Entity1ServletDelete() {
+    public StateServletDelete() {
         super();
     }
     
@@ -36,8 +36,8 @@ public class Entity1ServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		Entity1Dao entity1Dao = new Entity1Dao();
-		Entity1 entity1 = null;
+		StateDao entity1Dao = new StateDao();
+		Book entity1 = null;
 		if(method.equals("search"))
 		{
 			try {

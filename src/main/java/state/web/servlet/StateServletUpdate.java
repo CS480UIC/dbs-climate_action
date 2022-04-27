@@ -2,7 +2,6 @@ package state.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -11,20 +10,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.dao.Entity1Dao;
-import entity1.domain.Entity1;
+import state.dao.StateDao;
+import state.domain.Book;
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletUpdate extends HttpServlet {
+public class StateServletUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public Entity1ServletUpdate() {
+	public StateServletUpdate() {
 		super();
 	}
 
@@ -41,8 +40,8 @@ public class Entity1ServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		Entity1Dao entity1dao = new Entity1Dao();
-		Entity1 entity1 = null;
+		StateDao entity1dao = new StateDao();
+		Book entity1 = null;
 
 		if(method.equals("search"))
 		{
@@ -69,7 +68,7 @@ public class Entity1ServletUpdate extends HttpServlet {
 		else if(method.equals("update"))
 		{
 			Map<String,String[]> paramMap = request.getParameterMap();
-			Entity1 form = new Entity1();
+			Book form = new Book();
 			List<String> info = new ArrayList<String>();
 
 			for(String name : paramMap.keySet()) {

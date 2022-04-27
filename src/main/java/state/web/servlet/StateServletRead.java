@@ -8,21 +8,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.dao.Entity1Dao;
-import entity1.domain.Entity1;
+import state.dao.StateDao;
+import state.domain.Book;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletRead extends HttpServlet {
+public class StateServletRead extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Entity1ServletRead() {
+    public StateServletRead() {
         super();
     }
     
@@ -37,8 +37,8 @@ public class Entity1ServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Entity1 entity1 = null;
-		Entity1Dao entity1Dao = new Entity1Dao();
+		Book entity1 = null;
+		StateDao entity1Dao = new StateDao();
 		
 		try {
 			entity1 = entity1Dao.findByUsername(request.getParameter("username"));

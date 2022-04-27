@@ -1,17 +1,17 @@
 package state.service;
 
-public class Entity1Exception extends Exception {
+public class StateException extends Exception {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public Entity1Exception() {
+	public StateException() {
 		super();
 	}
 
-	public Entity1Exception(String message) {
+	public StateException(String message) {
 		super(message);
 	}
 

@@ -6,7 +6,7 @@ package state.domain;
  * @author Aayush Makharia
  * 
  */
-public class Entity1 {
+public class Book {
 	/*
 	 * Correspond to the user table
 	 */
