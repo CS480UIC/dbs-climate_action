@@ -22,7 +22,7 @@
   
   <body>
   <h1>Create a new state</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+<form action="<c:url value='/StateServletCreate'/>" method="post">
 	State code    :<input type="text" name="code" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>

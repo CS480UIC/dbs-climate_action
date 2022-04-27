@@ -12,7 +12,7 @@ import java.sql.SQLException;
 //import java.util.ArrayList;
 //import java.util.List;
 
-import state.domain.Book;
+import state.domain.State;
 
 /**
  * DDL functions performed in database
@@ -29,49 +29,49 @@ public class StateDao {
 	 */
 	private String MySQL_password = "jega2rox"; //TODO change password
 
-	public Book findByUsername(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Book entity1 = new Book();
+	public State findByCode(String code_p) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		State state = new State();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
-		    String sql = "select * from entity1 where username=?";
+		    String sql = "select * from book where code=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,username);
+		    preparestatement.setString(1,code_p);
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){
-		    	String user_name = resultSet.getString("username");
-		    	if(user_name.equals(username)){
-		    		entity1.setUsername(resultSet.getString("username"));
-		    		entity1.setPassword(resultSet.getString("password"));
-		    		entity1.setEmail(resultSet.getString("email"));		
+		    	String code = resultSet.getString("code");
+		    	if(code.equals(code_p)){
+		    		state.setArea(Integer.parseInt(resultSet.getString("area")));
+		    		state.setCode(code);
+		    		state.setName(resultSet.getString("name"));
 		    	}
 		    }
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
-		return entity1;
+		return state;
 	}	
 	
 	/**
-	 * insert Entity1
+	 * insert state
 	 * @param form
 	 * @throws ClassNotFoundException 
 	 * @throws IllegalAccessException 
 	 * @throws InstantiationException 
 	 */
 	
-	public void add(Book form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void add(State form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
 			
-			String sql = "insert into entity1 values(?,?,?)";
+			String sql = "insert into state (code, name, area) values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getUsername());
-		    preparestatement.setString(2,form.getPassword());
-		    preparestatement.setString(3,form.getEmail());
+		    preparestatement.setString(1,form.getCode());
+		    preparestatement.setString(2,form.getName());
+		    preparestatement.setInt(3,form.getArea());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -86,7 +86,7 @@ public class StateDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void update(Book form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void update(State form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);

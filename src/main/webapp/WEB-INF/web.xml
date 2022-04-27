@@ -59,6 +59,18 @@
     <url-pattern>/UserServletRegister</url-pattern>
   </servlet-mapping>
   
+  
+  	<servlet>
+    <description></description>
+    <display-name>State1ServletCreate</display-name>
+    <servlet-name>StateServletCreate</servlet-name>
+    <servlet-class>state.web.servlet.StateServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StateServletCreate</servlet-name>
+    <url-pattern>/StateServletCreate</url-pattern>
+  </servlet-mapping>
+  
    
     <servlet>
     <description></description>

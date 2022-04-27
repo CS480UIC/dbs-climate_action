@@ -41,7 +41,7 @@ public class Entity1ServletRead extends HttpServlet {
 		Entity1Dao entity1Dao = new Entity1Dao();
 		
 		try {
-			entity1 = entity1Dao.findByUsername(request.getParameter("username"));
+			entity1 = entity1Dao.findByCode(request.getParameter("username"));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
