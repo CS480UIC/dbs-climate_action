@@ -86,17 +86,20 @@ public class StateDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-/*	public void update(State form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void update(State form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
+			String sql = "UPDATE state SET name=?, area=? where code=?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getPassword());
-			preparestatement.setString(2,form.getEmail());
-		    preparestatement.setString(3,form.getUsername());
+			preparestatement.setString(1,form.getName());
+		    preparestatement.setInt(2,form.getArea());
+		    preparestatement.setString(3,form.getCode());
 		    preparestatement.executeUpdate();
+		    System.out.println(form.getName());
+		    System.out.println(form.getArea());
+		    System.out.println(form.getCode());
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);

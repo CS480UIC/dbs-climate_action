@@ -22,10 +22,10 @@
   
   <body>
   <h1>Update</h1>
-<form action="<c:url value='/state_update_output.jsp'/>" method="post">
+<form action="<c:url value='/StateServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update State   :<input type="text" name="code" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Update State   :<input type="text" name="code" value="${form.code }"/>
+	<span style="color: red; font-weight: 900">${errors.code }</span>
 	<br/>
 	<input type="submit" value="Update State"/>
 </form>

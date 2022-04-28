@@ -93,6 +93,19 @@
     <servlet-name>StateServletDelete</servlet-name>
     <url-pattern>/StateServletDelete</url-pattern>
   </servlet-mapping> 
+  
+ 
+    <servlet>
+    <description></description>
+    <display-name>StateServletUpdate</display-name>
+    <servlet-name>StateServletUpdate</servlet-name>
+    <servlet-class>state.web.servlet.StateServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StateServletUpdate</servlet-name>
+    <url-pattern>/StateServletUpdate</url-pattern>
+  </servlet-mapping>  
+ 
 
   <servlet>
     <description></description>

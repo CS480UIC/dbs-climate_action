@@ -40,13 +40,13 @@ public class StateServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		StateDao entity1dao = new StateDao();
-		State entity1 = null;
+		StateDao statedao = new StateDao();
+		State state = null;
 
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1dao.findByCode(request.getParameter("username"));
+				state = statedao.findByCode(request.getParameter("code"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -55,14 +55,14 @@ public class StateServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(entity1.getUsername()!=null){
-				request.setAttribute("entity1", entity1);
-				request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
+			if(state.getCode()!=null){
+				request.setAttribute("state", state);
+				request.getRequestDispatcher("/jsps/state/state_update_output.jsp").forward(request, response);
 
 			}
 			else{
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "State not found");
+				request.getRequestDispatcher("/jsps/state/state_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
@@ -75,12 +75,15 @@ public class StateServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setPassword(info.get(2));
-			form.setEmail(info.get(3));
-			form.setUsername(request.getParameter("username"));
+			//form.setPassword(info.get(2));
+			//form.setEmail(info.get(3));
+			//form.setUsername(request.getParameter("username"));
+			form.setCode(request.getParameter("code"));
+			form.setName(request.getParameter("name"));
+			form.setArea(Integer.parseInt(request.getParameter("area")));
 
 			try {
-				entity1dao.update(form);
+				statedao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -89,8 +92,8 @@ public class StateServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "State Updated");
+			request.getRequestDispatcher("/jsps/state/state_read_output.jsp").forward(request, response);
 		}
 	}
 }
