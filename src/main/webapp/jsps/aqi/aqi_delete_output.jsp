@@ -25,15 +25,15 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/AqiServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-	AQI ID   :<input type="text" name="aqi_id" value="${aqi.aqi_id }" disabled/>
+	AQI ID   :<input type="text" name="aqi_id" value="${aqi.aqi_id }" />
 	<br/>
-	Measuring Year：<input type="number" name="measuring_year" value="${aqi.measuring_year }" disabled/>
+	Measuring Year：<input type="number" name="measuring_year" value="${aqi.measuring_year }" />
 	<br/>
-	Value	：<input type="text" name="aqi_metric" value="${aqi.aqi_metric }" disabled/>
+	Value	：<input type="text" name="aqi_metric" value="${aqi.aqi_metric }" />
 	<br/>
-	Reporting City	：<input type="text" name="reporting_city" value="${aqi.reporting_city }" disabled/>
+	Reporting City	：<input type="text" name="reporting_city" value="${aqi.reporting_city }" />
 	<br/>
-	Reporting Date	：<input type="date" name="reporting_date" value="${aqi.reporting_date }" disabled/>
+	Reporting Date	：<input type="date" name="reporting_date" value="${aqi.reporting_date }" />
 	<br/>
 	<input type="submit" value="Delete AQI"/>
 </form>

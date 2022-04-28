@@ -72,7 +72,7 @@ public class Carbon_DioxideServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Deleted");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/carbon_dioxide/carbon_dioxide_read_output.jsp").forward(request, response);
 		}
 	}
 }

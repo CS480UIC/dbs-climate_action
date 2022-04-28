@@ -129,6 +129,8 @@ public class AqiDao {
 		    preparestatement.setString(1,aqi_idp);
 		    preparestatement.setInt(2,measuringyear);
 		    preparestatement.executeUpdate();
+		    System.out.println(aqi_idp);
+		    System.out.println(measuringyear);
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);

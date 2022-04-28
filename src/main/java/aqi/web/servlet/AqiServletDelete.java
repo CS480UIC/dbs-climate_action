@@ -49,7 +49,6 @@ public class AqiServletDelete extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			System.out.println(aqi.getAqi_id());
 			if(aqi.getAqi_id()!=null && aqi.getMeasuring_year()!= null){
 						System.out.println(aqi);
 						request.setAttribute("aqi", aqi);
