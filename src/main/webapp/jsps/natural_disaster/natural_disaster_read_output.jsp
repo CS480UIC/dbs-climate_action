@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity Output</title>
+    <title>Read Natural Disaster Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -24,13 +24,13 @@
   <h1>Read Natural Disaster Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Disaster ID   :<input type="number" name="n_id" value="${entity1.username }" disabled/>
+	Disaster ID   :<input type="number" name="n_id" value="${natural_disaster.n_id }" disabled/>
 	<br/>
-	Disaster Name：<input type="text" name="disaster_name" value="${entity1.password }" disabled/>
+	Disaster Name：<input type="text" name="disaster_name" value="${natural_disaster.disaster_name }" disabled/>
 	<br/>
-	Year of Occurence	：<input type="number" name="occurence_year" value="${entity1.email }" disabled/>
+	Date of Occurence	：<input type="date" name="occurence_date" value="${natural_disaster.occurence_date }" disabled/>
 	<br/>
-	Damage Costs	：<input type="number" name="damage_cost" value="${entity1.email }" disabled/>
+	Damage Costs	：<input type="number" name="damage_cost" value="${natural_disaster.damage_cost }" disabled/>
 	<br/>
 </form>
 

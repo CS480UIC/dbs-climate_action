@@ -22,9 +22,9 @@
   
   <body>
   <h1>Delete Natural Disaster entity</h1>
-<form action="<c:url value='natural_disaster_delete_output.jsp'/>" method="post">
+<form action="<c:url value='/Natural_DisasterServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Natural Disaster   :<input type="text" name="n_id" value="${form.username }"/>
+	Delete Natural Disaster   :<input type="number" name="n_id" value="${form.n_id }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
 	<input type="submit" value="Delete Natural Disaster entity"/>

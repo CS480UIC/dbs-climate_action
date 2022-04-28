@@ -37,11 +37,11 @@ public class Natural_DisasterServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Natural_Disaster entity1 = null;
-		AqiDao entity1Dao = new AqiDao();
+		Natural_Disaster natural_disaster = null;
+		Natural_DisasterDao natural_disasterDao = new Natural_DisasterDao();
 		
 		try {
-			entity1 = entity1Dao.findByAqi_id(request.getParameter("username"));
+			natural_disaster = natural_disasterDao.findByNid(Integer.parseInt(request.getParameter("n_id")));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -50,14 +50,14 @@ public class Natural_DisasterServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(entity1.getUsername()!=null){
-					System.out.println(entity1);
-					request.setAttribute("entity1", entity1);
-					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+		if(natural_disaster.getN_id()!=null){
+					System.out.println(natural_disaster);
+					request.setAttribute("natural_disaster", natural_disaster);
+					request.getRequestDispatcher("/jsps/natural_disaster/natural_disaster_read_output.jsp").forward(request, response);
 			}
 			else{
-			request.setAttribute("msg", "Entity not found");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "natural_disaster not found");
+			request.getRequestDispatcher("/jsps/natural_disaster/natural_disaster_read_output.jsp").forward(request, response);
 		}
 	}
 }

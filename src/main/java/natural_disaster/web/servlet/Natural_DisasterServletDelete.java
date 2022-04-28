@@ -36,12 +36,12 @@ public class Natural_DisasterServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		AqiDao entity1Dao = new AqiDao();
-		Natural_Disaster entity1 = null;
+		Natural_DisasterDao natural_disasterDao = new Natural_DisasterDao();
+		Natural_Disaster natural_disaster = null;
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1Dao.findByAqi_id(request.getParameter("username"));
+				natural_disaster = natural_disasterDao.findByNid(Integer.parseInt(request.getParameter("n_id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -50,20 +50,20 @@ public class Natural_DisasterServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-			if(entity1.getUsername()!=null){
-						System.out.println(entity1);
-						request.setAttribute("entity1", entity1);
-						request.getRequestDispatcher("/jsps/entity1/entity1_delete_output.jsp").forward(request, response);			
+			if(natural_disaster.getN_id()!=null){
+						System.out.println(natural_disaster);
+						request.setAttribute("natural_disaster", natural_disaster);
+						request.getRequestDispatcher("/jsps/natural_disaster/natural_disaster_delete_output.jsp").forward(request, response);			
 				}
 				else{
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "natural_disaster not found");
+				request.getRequestDispatcher("/jsps/natural_disaster/natural_disaster_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))
 		{	
 			try {
-				entity1Dao.delete(request.getParameter("username"));
+				natural_disasterDao.delete(request.getParameter("n_id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -71,8 +71,8 @@ public class Natural_DisasterServletDelete extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Deleted");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "natural_disaster Deleted");
+			request.getRequestDispatcher("/jsps/natural_disaster/natural_disaster_read_output.jsp").forward(request, response);
 		}
 	}
 }
