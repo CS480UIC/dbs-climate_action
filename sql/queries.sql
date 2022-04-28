@@ -1,8 +1,8 @@
 /* 7.1 */
-SELECT *
-FROM population
-WHERE p_id= 'IL'
-ORDER BY p_value;
+SELECT name
+FROM state
+WHERE area>100000
+ORDER BY name;
 
 SELECT *
 FROM natural_disaster
