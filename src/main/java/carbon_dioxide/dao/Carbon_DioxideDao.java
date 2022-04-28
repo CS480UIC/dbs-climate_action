@@ -43,7 +43,7 @@ public class Carbon_DioxideDao {
 		    while(resultSet.next()){
 		    	String co_id = resultSet.getString("co_id");
 		    	Integer emission_year = resultSet.getInt("emission_year");
-		    	if(co_id.equals(coid_p) && (emission_year==year_p)){
+		    	if(co_id.equals(coid_p) && (emission_year.equals(year_p))){
 		    		carbon_dioxide.setCo_id(co_id);
 		    		carbon_dioxide.setEmission_year(emission_year);
 		    		carbon_dioxide.setCo_metric(Double.parseDouble(resultSet.getString("co_metric")));

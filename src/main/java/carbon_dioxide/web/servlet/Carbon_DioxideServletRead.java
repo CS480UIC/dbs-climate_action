@@ -50,7 +50,7 @@ public class Carbon_DioxideServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(carbon_dioxide.getEmission_year()!=null){
+		if(carbon_dioxide.getCo_id()!=null && carbon_dioxide.getEmission_year()!=null){
 					System.out.println(carbon_dioxide);
 					request.setAttribute("carbon_dioxide", carbon_dioxide);
 					request.getRequestDispatcher("/jsps/carbon_dioxide/carbon_dioxide_read_output.jsp").forward(request, response);
