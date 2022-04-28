@@ -1,7 +1,7 @@
 /* 7.1 */
 SELECT *
 FROM population
-WHERE p_id= 'IL' AND recorded_year = 2020 
+WHERE p_id= 'IL'
 ORDER BY p_value;
 
 SELECT *
