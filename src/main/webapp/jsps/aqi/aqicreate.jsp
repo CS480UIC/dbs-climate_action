@@ -22,7 +22,7 @@
   
   <body>
   <h1>Create a new entry for AQI</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+<form action="<c:url value='/AqiServletCreate'/>" method="post">
 	AQI ID    :<input type="text" name="aqi_id" value="${form.n_id }"/>
 	<span style="color: red; font-weight: 900">${errors.n_id }</span>
 	<br/>
@@ -32,8 +32,11 @@
 	Value	：<input type="number" name="aqi_metric" value="${form.occurence_year }"/>
 	<span style="color: red; font-weight: 900">${errors.occurence_year }</span>
 	<br/>
-	Reporting City	：<input type="text" name="reporting_city" value="${form.damage_cost }"/>
-	<span style="color: red; font-weight: 900">${errors.damage_cost }</span>
+	Reporting City	：<input type="text" name="reporting_city" value="${form.reporting_city }"/>
+	<span style="color: red; font-weight: 900">${errors.reporting_city }</span>
+	<br/>
+	Reporting Date	：<input type="date" name="reporting_date" value="${form.reporting_date }"/>
+	<span style="color: red; font-weight: 900">${errors.reporting_date }</span>
 	<br/>
 	<input type="submit" value="Create AQI"/>
 </form>

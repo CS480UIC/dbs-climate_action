@@ -129,7 +129,27 @@
     <url-pattern>/Carbon_DioxideServletDelete</url-pattern>
   </servlet-mapping> 
       
-   
+   <servlet>
+    <description></description>
+    <display-name>AqiServletCreate</display-name>
+    <servlet-name>AqiServletCreate</servlet-name>
+    <servlet-class>aqi.web.servlet.AqiServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AqiServletCreate</servlet-name>
+    <url-pattern>/AqiServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>AqiServletRead</display-name>
+    <servlet-name>AqiServletRead</servlet-name>
+    <servlet-class>aqi.web.servlet.AqiServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AqiServletRead</servlet-name>
+    <url-pattern>/AqiServletRead</url-pattern>
+  </servlet-mapping>
    
     <servlet>
     <description></description>

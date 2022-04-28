@@ -23,17 +23,15 @@
   <body>
   <h1>Read AQI</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='aqi_read_output.jsp'/>" method="post">
+<form action="<c:url value='/AqiServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	AQI ID   :<input type="text" name="aqi_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	AQI ID   :<input type="text" name="aqi_id" value="${form.aqi_id}"/>
+	<span style="color: red; font-weight: 900">${errors.aqi_id}</span>
 	<br/>
-<%-- 	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	
+	Measuring Year   :<input type="number" name="measuring_year" value="${form.measuring_year}"/>
+	<span style="color: red; font-weight: 900">${errors.measuring_year}</span>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/> --%>
 	<input type="submit" value="Read AQI"/>
 </form>
   </body>
