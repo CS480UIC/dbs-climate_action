@@ -41,7 +41,7 @@ public class Entity1ServletDelete extends HttpServlet {
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1Dao.findByUsername(request.getParameter("username"));
+				entity1 = entity1Dao.findByCOID_Year(request.getParameter("username"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
