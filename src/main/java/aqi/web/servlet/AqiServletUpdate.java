@@ -39,14 +39,14 @@ public class AqiServletUpdate extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		/*String method = request.getParameter("method");
-		AqiDao entity1dao = new AqiDao();
-		Aqi entity1 = null;
+		String method = request.getParameter("method");
+		AqiDao aqidao = new AqiDao();
+		Aqi aqi = null;
 
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1dao.findByAqi_id(request.getParameter("username"));
+				aqi = aqidao.findByAqiMeasuring(request.getParameter("aqi_id"), Integer.parseInt(request.getParameter("measuring_year")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -55,14 +55,14 @@ public class AqiServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(entity1.getUsername()!=null){
-				request.setAttribute("entity1", entity1);
-				request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
+			if(aqi.getAqi_id()!=null && aqi.getMeasuring_year()!=null){
+				request.setAttribute("aqi", aqi);
+				request.getRequestDispatcher("/jsps/aqi/aqi_update_output.jsp").forward(request, response);
 
 			}
 			else{
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "Aqi not found");
+				request.getRequestDispatcher("/jsps/aqi/aqi_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
@@ -91,7 +91,7 @@ public class AqiServletUpdate extends HttpServlet {
 			}
 			request.setAttribute("msg", "Entity Updated");
 			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-		}*/
+		}
 	}
 }
 

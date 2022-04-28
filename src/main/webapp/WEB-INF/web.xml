@@ -177,6 +177,19 @@
     <servlet-name>AqiServletRead</servlet-name>
     <url-pattern>/AqiServletRead</url-pattern>
   </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>AqiServletDelete</display-name>
+    <servlet-name>AqiServletDelete</servlet-name>
+    <servlet-class>aqi.web.servlet.AqiServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AqiServletDelete</servlet-name>
+    <url-pattern>/AqiServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  
    
     <servlet>
     <description></description>

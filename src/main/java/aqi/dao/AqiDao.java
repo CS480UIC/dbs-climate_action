@@ -91,17 +91,19 @@ public class AqiDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	/*
-	public void update(Entity1 form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	
+	public void update(Aqi form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
+			String sql = "UPDATE aqi SET measuring_year = ?, aqi_metric = ?, reporting_city = ?, reporting_date = ? where aqi_id = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getPassword());
-			preparestatement.setString(2,form.getEmail());
-		    preparestatement.setString(3,form.getUsername());
+		    preparestatement.setInt(1,form.getMeasuring_year());
+		    preparestatement.setInt(2,form.getAqi_metric());
+		    preparestatement.setString(3,form.getReporting_city());
+		    preparestatement.setDate(4,form.getReporting_date());
+		    preparestatement.setString(5,form.getAqi_id());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -116,20 +118,21 @@ public class AqiDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	/*
-	public void delete(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	
+	public void delete(String aqi_idp, Integer measuringyear) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
 			
-			String sql = "delete from entity1 where username = ?";
+			String sql = "delete from aqi where aqi_id = ? and measuring_year = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,username);
+		    preparestatement.setString(1,aqi_idp);
+		    preparestatement.setInt(2,measuringyear);
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
 	}
-	*/
+	
 }

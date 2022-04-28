@@ -35,13 +35,13 @@ public class AqiServletDelete extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		/*String method = request.getParameter("method");
-		AqiDao entity1Dao = new AqiDao();
-		Aqi entity1 = null;
+		String method = request.getParameter("method");
+		AqiDao aqiDao = new AqiDao();
+		Aqi aqi = null;
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1Dao.findByAqi_id(request.getParameter("username"));
+				aqi = aqiDao.findByAqiMeasuring(request.getParameter("aqi_id"), Integer.parseInt(request.getParameter("measuring_year")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -49,21 +49,21 @@ public class AqiServletDelete extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-		
-			if(entity1.getUsername()!=null){
-						System.out.println(entity1);
-						request.setAttribute("entity1", entity1);
-						request.getRequestDispatcher("/jsps/entity1/entity1_delete_output.jsp").forward(request, response);			
+			System.out.println(aqi.getAqi_id());
+			if(aqi.getAqi_id()!=null && aqi.getMeasuring_year()!= null){
+						System.out.println(aqi);
+						request.setAttribute("aqi", aqi);
+						request.getRequestDispatcher("/jsps/aqi/aqi_delete_output.jsp").forward(request, response);			
 				}
 				else{
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "Aqi not found");
+				request.getRequestDispatcher("/jsps/aqi/aqi_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))
 		{	
 			try {
-				entity1Dao.delete(request.getParameter("username"));
+				aqiDao.delete(request.getParameter("aqi_id"), Integer.parseInt(request.getParameter("measuring_year")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -71,9 +71,9 @@ public class AqiServletDelete extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Deleted");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-		}*/
+			request.setAttribute("msg", "Aqi Deleted");
+			request.getRequestDispatcher("/jsps/aqi/aqi_read_output.jsp").forward(request, response);
+		}
 	}
 }
 

@@ -22,10 +22,13 @@
   
   <body>
   <h1>Delete AQI entity</h1>
-<form action="<c:url value='aqi_delete_output.jsp'/>" method="post">
+<form action="<c:url value='/AqiServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	AQI ID   :<input type="text" name="aqi_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	AQI ID   :<input type="text" name="aqi_id" value="${form.aqi_id }"/>
+	<span style="color: red; font-weight: 900">${errors.aqi_id }</span>
+	<br/>
+	Measuring Year   :<input type="number" name="measuring_year" value="${form.measuring_year }"/>
+	<span style="color: red; font-weight: 900">${errors.measuring_year }</span>
 	<br/>
 	<input type="submit" value="Delete AQI entity"/>
 </form>
