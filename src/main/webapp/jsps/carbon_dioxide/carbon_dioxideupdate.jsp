@@ -22,10 +22,14 @@
   
   <body>
   <h1>Update Carbon-dioxide</h1>
-<form action="<c:url value='carbon_dioxide_update_output.jsp'/>" method="post">
+<form action="<c:url value='/Carbon_DioxideServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update State ID   :<input type="text" name="co_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	<input type="hidden" name="method" value="regist"/>
+	State ID    :<input type="text" name="co_id" value="${form.co_id}"/>
+	<span style="color: red; font-weight: 900">${errors.co_id }</span>
+	<br/>
+	Year    :<input type="number" name="emission_year" value="${form.emission_year}"/>
+	<span style="color: red; font-weight: 900">${errors.emission_year }</span>
 	<br/>
 	<input type="submit" value="Update Carbon-dioxide"/>
 </form>

@@ -40,13 +40,13 @@ public class Carbon_DioxideServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		Carbon_DioxideDao entity1dao = new Carbon_DioxideDao();
-		Carbon_Dioxide entity1 = null;
+		Carbon_DioxideDao carbon_dioxidedao = new Carbon_DioxideDao();
+		Carbon_Dioxide carbon_dioxide = null;
 
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1dao.findByCode(request.getParameter("username"));
+				carbon_dioxide = carbon_dioxidedao.findByCOID_Year(request.getParameter("co_id"), Integer.parseInt(request.getParameter("emission_year")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -55,14 +55,14 @@ public class Carbon_DioxideServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(entity1.getUsername()!=null){
-				request.setAttribute("entity1", entity1);
-				request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
+			if(carbon_dioxide.getCo_id()!=null && carbon_dioxide.getEmission_year()!=null){
+				request.setAttribute("carbon_dioxide", carbon_dioxide);
+				request.getRequestDispatcher("/jsps/carbon_dioxide/carbon_dioxide_update_output.jsp").forward(request, response);
 
 			}
 			else{
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "Entry not found");
+				request.getRequestDispatcher("/jsps/carbon_dioxide/carbon_dioxide_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
@@ -75,12 +75,12 @@ public class Carbon_DioxideServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setPassword(info.get(2));
-			form.setEmail(info.get(3));
-			form.setUsername(request.getParameter("username"));
+			form.setCo_id(request.getParameter("co_id"));
+			form.setEmission_year(Integer.parseInt(request.getParameter("emission_year")));
+			form.setCo_metric(Double.parseDouble(request.getParameter("co_metric")));
 
 			try {
-				entity1dao.update(form);
+				carbon_dioxidedao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -90,7 +90,7 @@ public class Carbon_DioxideServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/carbon_dioxide/carbon_dioxide_read_output.jsp").forward(request, response);
 		}
 	}
 }

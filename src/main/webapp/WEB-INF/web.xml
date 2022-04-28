@@ -141,6 +141,20 @@
     <servlet-name>Carbon_DioxideServletDelete</servlet-name>
     <url-pattern>/Carbon_DioxideServletDelete</url-pattern>
   </servlet-mapping> 
+  
+ 
+    <servlet>
+    <description></description>
+    <display-name>Carbon_DioxideServletUpdate</display-name>
+    <servlet-name>Carbon_DioxideServletUpdate</servlet-name>
+    <servlet-class>carbon_dioxide.web.servlet.Carbon_DioxideServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Carbon_DioxideServletUpdate</servlet-name>
+    <url-pattern>/Carbon_DioxideServletUpdate</url-pattern>
+  </servlet-mapping>  
+ 
+  
       
    <servlet>
     <description></description>
