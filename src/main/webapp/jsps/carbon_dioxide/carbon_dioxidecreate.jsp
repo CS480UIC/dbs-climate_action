@@ -29,7 +29,7 @@
 	Year of Emission：<input type="number" name="emission_year" value="${form.emission_year }"/>
 	<span style="color: red; font-weight: 900">${errors.emission_year }</span>
 	<br/>
-	Value	：<input type="number" name="co_metric" value="${form.co_metric }"/>
+	Value	：<input type="number" step=any name="co_metric" value="${form.co_metric }"/>
 	<span style="color: red; font-weight: 900">${errors.co_metric }</span>
 	<br/>
 	<input type="submit" value="Create Carbon-dioxide"/>
