@@ -36,12 +36,12 @@ public class Carbon_DioxideServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		Carbon_DioxideDao entity1Dao = new Carbon_DioxideDao();
-		Carbon_Dioxide entity1 = null;
+		Carbon_DioxideDao carbon_dioxideDao = new Carbon_DioxideDao();
+		Carbon_Dioxide carbon_dioxide = null;
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1Dao.findByCode(request.getParameter("username"));
+				carbon_dioxide = carbon_dioxideDao.findByCOID_Year(request.getParameter("co_id"), Integer.parseInt(request.getParameter("emission_year")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -49,21 +49,21 @@ public class Carbon_DioxideServletDelete extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-		
-			if(entity1.getUsername()!=null){
-						System.out.println(entity1);
-						request.setAttribute("entity1", entity1);
-						request.getRequestDispatcher("/jsps/entity1/entity1_delete_output.jsp").forward(request, response);			
+			System.out.println(carbon_dioxide.getCo_id());
+			if(carbon_dioxide.getCo_id()!=null && carbon_dioxide.getEmission_year()!=null){
+						System.out.println(carbon_dioxide);
+						request.setAttribute("carbon_dioxide", carbon_dioxide);
+						request.getRequestDispatcher("/jsps/carbon_dioxide/carbon_dioxide_delete_output.jsp").forward(request, response);			
 				}
 				else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/carbon_dioxide/carbon_dioxide_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))
 		{	
 			try {
-				entity1Dao.delete(request.getParameter("username"));
+				carbon_dioxideDao.delete(request.getParameter("co_id"), Integer.parseInt(request.getParameter("emission_year")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {

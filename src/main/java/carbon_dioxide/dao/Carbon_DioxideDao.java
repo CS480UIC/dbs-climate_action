@@ -112,7 +112,7 @@ public class Carbon_DioxideDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void delete(String coid_p, String year_p) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void delete(String coid_p, Integer year_p) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
@@ -120,7 +120,7 @@ public class Carbon_DioxideDao {
 			String sql = "delete from carbon_dioxide where co_id = ? and emission_year=?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,coid_p);
-		    preparestatement.setInt(2,Integer.parseInt(year_p));
+		    preparestatement.setInt(2,year_p);
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

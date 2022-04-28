@@ -117,6 +117,20 @@
     <url-pattern>/Carbon_DioxideServletRead</url-pattern>
   </servlet-mapping> 
    
+
+   <servlet>
+    <description></description>
+    <display-name>Carbon_DioxideServletDelete</display-name>
+    <servlet-name>Carbon_DioxideServletDelete</servlet-name>
+    <servlet-class>carbon_dioxide.web.servlet.Carbon_DioxideServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Carbon_DioxideServletDelete</servlet-name>
+    <url-pattern>/Carbon_DioxideServletDelete</url-pattern>
+  </servlet-mapping> 
+      
+   
+   
     <servlet>
     <description></description>
     <display-name>InitializeDB</display-name>

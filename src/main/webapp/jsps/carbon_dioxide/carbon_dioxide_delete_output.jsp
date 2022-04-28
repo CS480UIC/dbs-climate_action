@@ -23,15 +23,13 @@
   <body>
   <h1>Delete Carbon-dioxide</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/Carbon_DioxideServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${entity1.username }"/>
-	State ID    :<input type="text" name="co_id" value="${entity1.username }" disabled/>
+	State ID    :<input type="text" name="co_id" value="${carbon_dioxide.co_id }" />
 	<br/>
-	
-	Year of emission：<input type="text" name="emission_year" value="${entity1.password }" disabled/>
+	Year of Emission：<input type="number" name="emission_year" value="${carbon_dioxide.emission_year }" />
 	<br/>
-	Value	：<input type="text" name="co_metric" value="${entity1.email }" disabled/>
+	Value	：<input type="number" step=any name="co_metric" value="${carbon_dioxide.co_metric }" />
 	<br/>
 	<input type="submit" value="Delete Carbon-dioxide"/>
 </form>
