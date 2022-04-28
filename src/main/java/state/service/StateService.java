@@ -1,6 +1,8 @@
 package state.service;
 
 
+import java.util.List;
+
 import state.dao.StateDao;
 import state.domain.State;
 
@@ -25,5 +27,11 @@ public class StateService {
 		if(entity1.getCode()!=null && entity1.getCode().equals(form.getCode())) throw new StateException("This user name has been registered before!");
 		stateDao.add(form);
 	}
+	public List<Object> findPopulation() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return StateDao.findPopulation();
+		
+	}
+		
+	
 
 }

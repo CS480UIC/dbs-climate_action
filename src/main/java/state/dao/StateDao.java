@@ -5,14 +5,14 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.util.ArrayList;
 //import java.util.List;
 
 import state.domain.State;
+import user.domain.User;
 
 /**
  * DDL functions performed in database
@@ -126,6 +126,30 @@ public class StateDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	
+	public List<Object> findPopulation() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
+			String sql = "select name from state where area>100000 order by name";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				User user = new User();
+				user.setUsername(resultSet.getString("username"));
+	    		user.setPassword(resultSet.getString("password"));
+	    		user.setEmail(resultSet.getString("email"));
+	    		list.add(user);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
 	}
 	
 }
