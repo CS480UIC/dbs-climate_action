@@ -37,11 +37,11 @@ public class StateServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		State entity1 = null;
-		StateDao entity1Dao = new StateDao();
+		State state = null;
+		StateDao stateDao = new StateDao();
 		
 		try {
-			entity1 = entity1Dao.findByCode(request.getParameter("username"));
+			state = stateDao.findByCode(request.getParameter("code"));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -50,14 +50,14 @@ public class StateServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(entity1.getUsername()!=null){
-					System.out.println(entity1);
-					request.setAttribute("entity1", entity1);
-					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+		if(state.getCode()!=null){
+					System.out.println(state);
+					request.setAttribute("state", state);
+					request.getRequestDispatcher("/jsps/state/state_read_output.jsp").forward(request, response);
 			}
 			else{
-			request.setAttribute("msg", "Entity not found");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "State not found");
+			request.getRequestDispatcher("/jsps/state/state_read_output.jsp").forward(request, response);
 		}
 	}
 }

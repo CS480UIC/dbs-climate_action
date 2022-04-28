@@ -70,7 +70,30 @@
     <servlet-name>StateServletCreate</servlet-name>
     <url-pattern>/StateServletCreate</url-pattern>
   </servlet-mapping>
+
+  	<servlet>
+    <description></description>
+    <display-name>StateServletRead</display-name>
+    <servlet-name>StateServletRead</servlet-name>
+    <servlet-class>state.web.servlet.StateServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StateServletRead</servlet-name>
+    <url-pattern>/StateServletRead</url-pattern>
+  </servlet-mapping>
   
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>StateServletDelete</display-name>
+    <servlet-name>StateServletDelete</servlet-name>
+    <servlet-class>state.web.servlet.StateServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StateServletDelete</servlet-name>
+    <url-pattern>/StateServletDelete</url-pattern>
+  </servlet-mapping>
   
   <servlet>
     <description></description>

@@ -23,15 +23,15 @@
   <body>
   <h1>Delete State</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/StateServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${entity1.username }"/>
-	State Code    :<input type="text" name="code" value="${entity1.username }" disabled/>
+		
+	State Code    :<input type="text" name="code" value="${state.code }" disabled/>
 	<br/>
 	
-	State Name：<input type="text" name="name" value="${entity1.password }" disabled/>
+	State Name：<input type="text" name="name" value="${state.name }" disabled/>
 	<br/>
-	State Area	：<input type="text" name="area" value="${entity1.email }" disabled/>
+	State Area	：<input type="number" name="area" value="${state.area }" disabled/>
 	<br/>
 	<input type="submit" value="Delete State"/>
 </form>

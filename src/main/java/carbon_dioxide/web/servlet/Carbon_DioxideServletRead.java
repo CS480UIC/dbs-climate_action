@@ -37,11 +37,11 @@ public class Carbon_DioxideServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Carbon_Dioxide entity1 = null;
-		Carbon_DioxideDao entity1Dao = new Carbon_DioxideDao();
+		Carbon_Dioxide carbon_dioxide = null;
+		Carbon_DioxideDao carbon_dioxideDao = new Carbon_DioxideDao();
 		
 		try {
-			entity1 = entity1Dao.findByCode(request.getParameter("username"));
+			carbon_dioxide = carbon_dioxideDao.findByCode(request.getParameter("username"));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -50,9 +50,9 @@ public class Carbon_DioxideServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(entity1.getUsername()!=null){
-					System.out.println(entity1);
-					request.setAttribute("entity1", entity1);
+		if(carbon_dioxide.getUsername()!=null){
+					System.out.println(carbon_dioxide);
+					request.setAttribute("entity1", carbon_dioxide);
 					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
 			}
 			else{

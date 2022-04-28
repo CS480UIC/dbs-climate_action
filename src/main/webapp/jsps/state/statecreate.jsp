@@ -23,14 +23,14 @@
   <body>
   <h1>Create a new state</h1>
 <form action="<c:url value='/StateServletCreate'/>" method="post">
-	State code    :<input type="text" name="code" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	State code    :<input type="text" name="code" value="${form.code }"/>
+	<span style="color: red; font-weight: 900">${errors.code }</span>
 	<br/>
-	State name：<input type="text" name="name" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	State name：<input type="text" name="name" value="${form.name }"/>
+	<span style="color: red; font-weight: 900">${errors.name }</span>
 	<br/>
-	State area	：<input type="number" name="area" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	State area	：<input type="number" name="area" value="${form.area }"/>
+	<span style="color: red; font-weight: 900">${errors.area }</span>
 	<br/>
 	<input type="submit" value="Create State"/>
 </form>

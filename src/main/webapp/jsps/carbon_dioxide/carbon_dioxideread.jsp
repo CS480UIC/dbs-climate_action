@@ -25,8 +25,11 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='carbon_dioxide_read_output.jsp'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	State ID    :<input type="text" name="co_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	State ID    :<input type="text" name="co_id" value="${form.co_id }"/>
+	<span style="color: red; font-weight: 900">${errors.co_id }</span>
+	<br/>
+	Year    :<input type="number" name="emission_year" value="${form.emission_year }"/>
+	<span style="color: red; font-weight: 900">${errors.emission_year }</span>
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>

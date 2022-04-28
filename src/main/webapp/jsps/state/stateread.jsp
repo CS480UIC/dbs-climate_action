@@ -23,10 +23,10 @@
   <body>
   <h1>Read State</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/state_read_output.jsp'/>" method="post">
+<form action="<c:url value='/StateServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	State Code    :<input type="text" name="code" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	State Code    :<input type="text" name="code" value="${form.code }"/>
+	<span style="color: red; font-weight: 900">${errors.code }</span>
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>

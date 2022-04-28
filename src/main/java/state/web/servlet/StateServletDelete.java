@@ -36,12 +36,12 @@ public class StateServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		StateDao entity1Dao = new StateDao();
-		State entity1 = null;
+		StateDao stateDao = new StateDao();
+		State state = null;
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1Dao.findByCode(request.getParameter("username"));
+				state = stateDao.findByCode(request.getParameter("code"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -50,20 +50,20 @@ public class StateServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-			if(entity1.getUsername()!=null){
-						System.out.println(entity1);
-						request.setAttribute("entity1", entity1);
-						request.getRequestDispatcher("/jsps/entity1/entity1_delete_output.jsp").forward(request, response);			
+			if(state.getCode()!=null){
+						System.out.println(state);
+						request.setAttribute("state", state);
+						request.getRequestDispatcher("/jsps/state/state_delete_output.jsp").forward(request, response);			
 				}
 				else{
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "State not found");
+				request.getRequestDispatcher("/jsps/state/state_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))
 		{	
 			try {
-				entity1Dao.delete(request.getParameter("username"));
+				stateDao.delete(request.getParameter("code"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -71,8 +71,8 @@ public class StateServletDelete extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Deleted");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "State Deleted");
+			request.getRequestDispatcher("/jsps/state/state_read_output.jsp").forward(request, response);
 		}
 	}
 }

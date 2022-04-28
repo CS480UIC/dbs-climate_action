@@ -110,19 +110,19 @@ public class StateDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-/*	public void delete(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void delete(String code_p) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
 			
-			String sql = "delete from entity1 where username = ?";
+			String sql = "delete from state where code = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,username);
+		    preparestatement.setString(1,code_p);
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
 	}
-	*/
+	
 }

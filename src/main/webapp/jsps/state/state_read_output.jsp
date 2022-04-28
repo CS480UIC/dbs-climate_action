@@ -24,11 +24,11 @@
   <h1>Read State Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	State Code    :<input type="text" name="code" value="${entity1.username }" disabled/>
+	State code    :<input type="text" name="code" value="${state.code }" disabled />
 	<br/>
-	State Name：<input type="text" name="name" value="${entity1.password }" disabled/>
+	State name：<input type="text" name="name" value="${state.name }" disabled/>
 	<br/>
-	State Area	：<input type="text" name="area" value="${entity1.email }" disabled/>
+	State area	：<input type="number" name="area" value="${state.area }" disabled/>
 	<br/>
 </form>
 
