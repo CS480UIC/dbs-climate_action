@@ -115,7 +115,7 @@ public class StateDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
 			
-			String sql = "delete from state where code = ?";
+			String sql = "delete from state where code=?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,code_p);
 		    preparestatement.executeUpdate();

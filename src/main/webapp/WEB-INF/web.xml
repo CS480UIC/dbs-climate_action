@@ -83,8 +83,7 @@
   </servlet-mapping>
   
   
-  
-    <servlet>
+   	<servlet>
     <description></description>
     <display-name>StateServletDelete</display-name>
     <servlet-name>StateServletDelete</servlet-name>
@@ -93,8 +92,8 @@
   <servlet-mapping>
     <servlet-name>StateServletDelete</servlet-name>
     <url-pattern>/StateServletDelete</url-pattern>
-  </servlet-mapping>
-  
+  </servlet-mapping> 
+
   <servlet>
     <description></description>
     <display-name>Carbon_DioxideServletCreate</display-name>

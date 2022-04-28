@@ -21,17 +21,16 @@
   </head>
   
   <body>
-  <h1>Delete State</h1>
+  <h1>Delete State Entry</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/StateServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
 		
-	State Code    :<input type="text" name="code" value="${state.code }" disabled/>
+	State code    :<input type="text" name="code" value="${state.code }"  />
 	<br/>
-	
-	State Name：<input type="text" name="name" value="${state.name }" disabled/>
+	State name：<input type="text" name="name" value="${state.name }" />
 	<br/>
-	State Area	：<input type="number" name="area" value="${state.area }" disabled/>
+	State area	：<input type="number" name="area" value="${state.area }" />
 	<br/>
 	<input type="submit" value="Delete State"/>
 </form>

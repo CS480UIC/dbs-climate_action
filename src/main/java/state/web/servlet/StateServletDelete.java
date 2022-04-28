@@ -51,7 +51,7 @@ public class StateServletDelete extends HttpServlet {
 			}
 		
 			if(state.getCode()!=null){
-						System.out.println(state);
+						//System.out.println(state.getCode());
 						request.setAttribute("state", state);
 						request.getRequestDispatcher("/jsps/state/state_delete_output.jsp").forward(request, response);			
 				}
@@ -63,6 +63,8 @@ public class StateServletDelete extends HttpServlet {
 		else if(method.equals("delete"))
 		{	
 			try {
+				//state = stateDao.findByCode(request.getParameter("name"));
+				//System.out.println(state.getName());
 				stateDao.delete(request.getParameter("code"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
