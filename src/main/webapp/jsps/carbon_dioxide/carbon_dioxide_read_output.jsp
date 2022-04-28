@@ -24,11 +24,11 @@
   <h1>Read Carbon-dioxide Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	State ID    :<input type="text" name="co_id" value="${entity1.username }" disabled/>
+	State ID    :<input type="text" name="co_id" value="${carbon_dioxide.co_id }" disabled/>
 	<br/>
-	Year of emission：<input type="text" name="emission_year" value="${entity1.password }" disabled/>
+	Year of Emission：<input type="number" name="emission_year" value="${carbon_dioxide.emission_year }" disabled/>
 	<br/>
-	Value	：<input type="text" name="co_value" value="${entity1.email }" disabled/>
+	Value	：<input type="number" step=any name="co_metric" value="${carbon_dioxide.co_metric }" disabled/>
 	<br/>
 </form>
 

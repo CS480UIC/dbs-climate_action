@@ -23,20 +23,15 @@
   <body>
   <h1>Read Carbon-dioxide</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='carbon_dioxide_read_output.jsp'/>" method="post">
+<form action="<c:url value='/Carbon_DioxideServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	State ID    :<input type="text" name="co_id" value="${form.co_id }"/>
+	State ID    :<input type="text" name="co_id" value="${form.co_id}"/>
 	<span style="color: red; font-weight: 900">${errors.co_id }</span>
 	<br/>
-	Year    :<input type="number" name="emission_year" value="${form.emission_year }"/>
+	Year    :<input type="number" name="emission_year" value="${form.emission_year}"/>
 	<span style="color: red; font-weight: 900">${errors.emission_year }</span>
 	<br/>
-<%-- 	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
-	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/> --%>
+
 	<input type="submit" value="Read Carbon-dioxide"/>
 </form>
   </body>

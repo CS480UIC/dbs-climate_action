@@ -41,7 +41,7 @@ public class Carbon_DioxideServletRead extends HttpServlet {
 		Carbon_DioxideDao carbon_dioxideDao = new Carbon_DioxideDao();
 		
 		try {
-			carbon_dioxide = carbon_dioxideDao.findByCode(request.getParameter("username"));
+			carbon_dioxide = carbon_dioxideDao.findByCOID_Year(request.getParameter("co_id"), Integer.parseInt(request.getParameter("emission_year")));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -50,14 +50,14 @@ public class Carbon_DioxideServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(carbon_dioxide.getUsername()!=null){
+		if(carbon_dioxide.getEmission_year()!=null){
 					System.out.println(carbon_dioxide);
-					request.setAttribute("entity1", carbon_dioxide);
-					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+					request.setAttribute("carbon_dioxide", carbon_dioxide);
+					request.getRequestDispatcher("/jsps/carbon_dioxide/carbon_dioxide_read_output.jsp").forward(request, response);
 			}
 			else{
-			request.setAttribute("msg", "Entity not found");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "Entry Not Found");
+			request.getRequestDispatcher("/jsps/carbon_dioxide/carbon_dioxide_read_output.jsp").forward(request, response);
 		}
 	}
 }
