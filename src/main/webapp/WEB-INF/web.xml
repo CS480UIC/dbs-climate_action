@@ -225,6 +225,19 @@
     <servlet-name>UserServletLogout</servlet-name>
     <url-pattern>/UserServletLogout</url-pattern>
   </servlet-mapping>
+
+
+  <servlet>
+    <description></description>
+    <display-name>ILPopulation</display-name>
+    <servlet-name>ILPopulation</servlet-name>
+    
+    <servlet-class>user.web.servlet.ILPopulation</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ILPopulation</servlet-name>
+    <url-pattern>/ILPopulation</url-pattern>
+  </servlet-mapping>
   
   
   <servlet>

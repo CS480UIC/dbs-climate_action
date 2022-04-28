@@ -27,13 +27,13 @@ public class ILPopulation extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		StateService stateservice = new StateService();
 		try {
-			request.setAttribute("PopulationList", stateservice.findall());
+			request.setAttribute("PopulationList", stateservice.findPopulation());
 		} catch (InstantiationException | IllegalAccessException
 				| ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 		try {
-			List<Object> li = stateservice.findall();
+			List<Object> li = stateservice.findPopulation();
 			for(int i = 0; i < li.size();i++){
 				System.out.println(li.get(i).toString());
 			}

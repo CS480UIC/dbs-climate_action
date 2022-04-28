@@ -28,7 +28,7 @@ public class StateService {
 		stateDao.add(form);
 	}
 	public List<Object> findPopulation() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
-		return StateDao.findPopulation();
+		return stateDao.findPopulation();
 		
 	}
 		

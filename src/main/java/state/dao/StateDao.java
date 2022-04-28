@@ -138,11 +138,11 @@ public class StateDao {
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
-				User user = new User();
-				user.setUsername(resultSet.getString("username"));
-	    		user.setPassword(resultSet.getString("password"));
-	    		user.setEmail(resultSet.getString("email"));
-	    		list.add(user);
+				State state = new State();
+				state.setName("name");
+	    		/*state.setPassword(resultSet.getString("password"));
+	    		state.setEmail(resultSet.getString("email"));*/
+	    		list.add(state);
 			 }
 			connect.close();
 		} catch(SQLException e) {

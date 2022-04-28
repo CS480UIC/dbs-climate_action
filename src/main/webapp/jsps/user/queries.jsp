@@ -26,7 +26,7 @@
     <br>
     <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>&nbsp;&nbsp;
     <br/>
-    <a href="<c:url value='/findAll'/>" target="body">List the population of Illinois</a>&nbsp;&nbsp;
+    <a href="<c:url value='/ILPopulation'/>" target="body">List the population of Illinois</a>&nbsp;&nbsp;
  
     
   </body>

@@ -15,7 +15,7 @@
 	</tr>
 <c:forEach items="${PopulationList}" var="state">
 	<tr>
-		<td>${state.population}</td>
+		<td>${state.name}</td>
 	</tr>
 </c:forEach>
 </table>
