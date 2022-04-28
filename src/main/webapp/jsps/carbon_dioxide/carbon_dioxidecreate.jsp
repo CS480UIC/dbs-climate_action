@@ -22,7 +22,7 @@
   
   <body>
   <h1>Create a new entry for Carbon-dioxide</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+<form action="<c:url value='/Carbon_DioxideServletCreate'/>" method="post">
 	State ID    :<input type="text" name="co_id" value="${form.co_id }"/>
 	<span style="color: red; font-weight: 900">${errors.co_id }</span>
 	<br/>

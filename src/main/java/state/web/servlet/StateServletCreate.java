@@ -49,9 +49,9 @@ public class StateServletCreate extends HttpServlet {
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 		}
-		form.setUsername(info.get(0));
-		form.setPassword(info.get(1));
-		form.setEmail(info.get(2));		
+		form.setCode(info.get(0));
+		form.setName(info.get(1));
+		form.setArea(Integer.parseInt(info.get(2)));		
 		
 		try {
 			entity1service.create(form);

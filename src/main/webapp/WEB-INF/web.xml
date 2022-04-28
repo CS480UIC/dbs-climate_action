@@ -62,13 +62,25 @@
   
   	<servlet>
     <description></description>
-    <display-name>State1ServletCreate</display-name>
+    <display-name>StateServletCreate</display-name>
     <servlet-name>StateServletCreate</servlet-name>
     <servlet-class>state.web.servlet.StateServletCreate</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>StateServletCreate</servlet-name>
     <url-pattern>/StateServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>Carbon_DioxideServletCreate</display-name>
+    <servlet-name>Carbon_DioxideServletCreate</servlet-name>
+    <servlet-class>carbon_dioxide.web.servlet.Carbon_DioxideServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Carbon_DioxideServletCreate</servlet-name>
+    <url-pattern>/Carbon_DioxideServletCreate</url-pattern>
   </servlet-mapping>
   
    

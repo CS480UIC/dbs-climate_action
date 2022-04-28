@@ -49,9 +49,9 @@ public class Carbon_DioxideServletCreate extends HttpServlet {
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 		}
-		form.setUsername(info.get(0));
-		form.setPassword(info.get(1));
-		form.setEmail(info.get(2));		
+		form.setCo_id(info.get(0));
+		form.setEmission_year(Integer.parseInt(info.get(1)));
+		form.setCo_metric(Double.parseDouble(info.get(2)));		
 		
 		try {
 			entity1service.create(form);
