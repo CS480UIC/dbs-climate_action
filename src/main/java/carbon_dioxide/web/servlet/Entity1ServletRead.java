@@ -1,4 +1,4 @@
-package entity1.web.servlet;
+package carbon_dioxide.web.servlet;
 
 import java.io.IOException;
 
