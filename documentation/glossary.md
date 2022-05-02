@@ -168,4 +168,4 @@ This relationship show that a state can cause deforestation.
  -- state_natural_disaster.n_id for Update and Delete
  
 ### RESTRICT:
- -- No restrict actions
+ -- No restrict action
