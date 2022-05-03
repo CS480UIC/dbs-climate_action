@@ -27,6 +27,8 @@
     <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>&nbsp;&nbsp;
     <br/>
     <a href="<c:url value='/findState'/>" target="body">List the states with area more than 100,000</a>&nbsp;&nbsp;
+    <br/>
+    <a href="<c:url value='/findState'/>" target="body">List the years with their average CO2 emission</a>&nbsp;&nbsp;
  
     
   </body>
