@@ -41,7 +41,7 @@
 	State Area	：<input type="number" name="area" value="${form.area }"/>
 	<span style="color: red; font-weight: 900">${errors.area }</span>
 	<br/>
-	<input type="submit" value="Update Entity1"/>
+	<input type="submit" value="Update State"/>
 </form>
 
 </body>

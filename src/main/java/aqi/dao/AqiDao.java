@@ -97,13 +97,13 @@ public class AqiDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE aqi SET measuring_year = ?, aqi_metric = ?, reporting_city = ?, reporting_date = ? where aqi_id = ?;";
+			String sql = "UPDATE aqi SET aqi_metric = ?, reporting_city = ?, reporting_date = ? where aqi_id = ? and measuring_year = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setInt(1,form.getMeasuring_year());
-		    preparestatement.setInt(2,form.getAqi_metric());
-		    preparestatement.setString(3,form.getReporting_city());
-		    preparestatement.setDate(4,form.getReporting_date());
-		    preparestatement.setString(5,form.getAqi_id());
+		    preparestatement.setInt(1,form.getAqi_metric());
+		    preparestatement.setString(2,form.getReporting_city());
+		    preparestatement.setDate(3,form.getReporting_date());
+		    preparestatement.setString(4,form.getAqi_id());
+		    preparestatement.setInt(5,form.getMeasuring_year());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

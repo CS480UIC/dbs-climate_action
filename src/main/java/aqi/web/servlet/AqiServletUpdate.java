@@ -75,12 +75,15 @@ public class AqiServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setPassword(info.get(2));
-			form.setEmail(info.get(3));
-			form.setUsername(request.getParameter("username"));
+			form.setAqi_id(request.getParameter("aqi_id"));
+			form.setMeasuring_year(Integer.parseInt(request.getParameter("measuring_year")));
+			form.setAqi_metric(Integer.parseInt(request.getParameter("aqi_metric")));
+			form.setReporting_city(request.getParameter("reporting_city"));
+			form.setReporting_date(java.sql.Date.valueOf(request.getParameter("reporting_date")));
+			
 
 			try {
-				entity1dao.update(form);
+				aqidao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -89,8 +92,8 @@ public class AqiServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "Aqi Updated");
+			request.getRequestDispatcher("/jsps/aqi/aqi_read_output.jsp").forward(request, response);
 		}
 	}
 }

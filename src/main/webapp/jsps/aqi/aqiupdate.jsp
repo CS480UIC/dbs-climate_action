@@ -22,10 +22,13 @@
   
   <body>
   <h1>Update AQI</h1>
-<form action="<c:url value='aqi_update_output.jsp'/>" method="post">
+<form action="<c:url value='/AqiServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update AQI ID   :<input type="text" name="aqi_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Update AQI ID   :<input type="text" name="aqi_id" value="${form.aqi_id }"/>
+	<span style="color: red; font-weight: 900">${errors.aqi_id }</span>
+	<br/>
+	Update Measuring Year   :<input type="text" name="measuring_year" value="${form.measuring_year }"/>
+	<span style="color: red; font-weight: 900">${errors.measuring_year }</span>
 	<br/>
 	<input type="submit" value="Update AQI"/>
 </form>
