@@ -1,4 +1,4 @@
-package user.web.servlet;
+package carbon_dioxide.web.servlet;
 
 import java.io.IOException;
 import java.util.List;
@@ -8,13 +8,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import user.service.UserService;
+import carbon_dioxide.service.Carbon_DioxideService;
 
 /**
  * Servlet implementation class findAll
  */
 
-public class findAll extends HttpServlet {
+public class findEmission extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -25,15 +25,15 @@ public class findAll extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		UserService userservice = new UserService();
+		Carbon_DioxideService carbon_dioxideservice = new Carbon_DioxideService();
 		try {
-			request.setAttribute("UserList", userservice.findall());
+			request.setAttribute("EmissionList", carbon_dioxideservice.findEmission());
 		} catch (InstantiationException | IllegalAccessException
 				| ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 		try {
-			List<Object> li = userservice.findall();
+			List<Object> li = carbon_dioxideservice.findEmission();
 			for(int i = 0; i < li.size();i++){
 				System.out.println(li.get(i).toString());
 			}
@@ -44,7 +44,7 @@ public class findAll extends HttpServlet {
 		}
 		
 		
-		request.getRequestDispatcher("/jsps/user/q1_list_users.jsp").forward(request, response);
+		request.getRequestDispatcher("/jsps/carbon_dioxide/q1_list_emission.jsp").forward(request, response);
 	}
 
 }

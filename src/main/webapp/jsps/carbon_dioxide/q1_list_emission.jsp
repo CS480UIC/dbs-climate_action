@@ -17,7 +17,7 @@
 <c:forEach items="${EmissionList}" var="emission">
 	<tr>
 		<td>${emission.year}</td>
-		<td>${emission.average}</td>
+		<td>${emission.emission}</td>
 	</tr>
 </c:forEach>
 </table>

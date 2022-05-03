@@ -283,6 +283,18 @@
   </servlet-mapping>
 
 
+  <servlet>
+    <description></description>
+    <display-name>findEmission</display-name>
+    <servlet-name>findEmission</servlet-name>
+    
+    <servlet-class>carbon_dioxide.web.servlet.findEmission</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findEmission</servlet-name>
+    <url-pattern>/findEmission</url-pattern>
+  </servlet-mapping>
+
   
   <servlet>
     <description></description>

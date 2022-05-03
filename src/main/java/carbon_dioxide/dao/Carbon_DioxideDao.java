@@ -5,14 +5,15 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.util.ArrayList;
 //import java.util.List;
 
 import carbon_dioxide.domain.Carbon_Dioxide;
+import carbon_dioxide.domain.Emission;
+import user.domain.User;
 
 /**
  * DDL functions performed in database
@@ -126,5 +127,28 @@ public class Carbon_DioxideDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	
+	public List<Object> findEmission() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
+			String sql = "select emission_year, AVG(co_metric) as avg_metric from carbon_dioxide group by emission_year";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Emission user = new Emission();
+				user.setYear(Integer.parseInt(resultSet.getString("emission_year")));
+	    		user.setEmission(Double.parseDouble(resultSet.getString("avg_metric")));
+	    		list.add(user);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
 	}
 }
