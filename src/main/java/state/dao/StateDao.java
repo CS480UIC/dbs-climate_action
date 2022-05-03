@@ -151,5 +151,29 @@ public class StateDao {
 		return list;
 		
 	}
+
+	
+	public List<Object> findallstates() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
+			String sql = "select name,area from state where area>100000 order by name";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				State state = new State();
+				state.setName(resultSet.getString("name"));
+	    		state.setArea(Integer.parseInt(resultSet.getString("area")));
+	    		
+	    		list.add(state);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
 	
 }

@@ -31,7 +31,11 @@ public class StateService {
 		return stateDao.findPopulation();
 		
 	}
+	
+	public List<Object> findallstates() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return stateDao.findallstates();
 		
+	}
 	
 
 }

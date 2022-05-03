@@ -8,14 +8,16 @@
 
 </head>
 <body>
-	<h3 align="center"> State Name </h3>
+	<h3 align="center"> Emission Table </h3>
 	<table border="1" width="70%" align="center">
 	<tr>
-		<th>Name</th>
+		<th>Year</th>
+		<th>Average Emission</th>
 	</tr>
-<c:forEach items="${PopulationList}" var="state">
+<c:forEach items="${EmissionList}" var="emission">
 	<tr>
-		<td>${state.name}</td>
+		<td>${emission.year}</td>
+		<td>${emission.emission}</td>
 	</tr>
 </c:forEach>
 </table>
