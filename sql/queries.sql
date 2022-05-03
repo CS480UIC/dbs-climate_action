@@ -1,5 +1,5 @@
 /* 7.1 */
-SELECT name
+SELECT name, area
 FROM state
 WHERE area>100000
 ORDER BY name;
