@@ -106,7 +106,6 @@ public class Natural_DisasterDao {
 		}
 	}
 	
-	
 	/**
 	 * @param username
 	 * @throws ClassNotFoundException
