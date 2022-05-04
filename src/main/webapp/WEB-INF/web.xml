@@ -210,6 +210,17 @@
     <servlet-name>Natural_DisasterServletCreate</servlet-name>
     <url-pattern>/Natural_DisasterServletCreate</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>Natural_DisasterServletRead</display-name>
+    <servlet-name>Natural_DisasterServletRead</servlet-name>
+    <servlet-class>natural_disaster.web.servlet.Natural_DisasterServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Natural_DisasterServletRead</servlet-name>
+    <url-pattern>/Natural_DisasterServletRead</url-pattern>
+  </servlet-mapping>
    
     <servlet>
     <description></description>
