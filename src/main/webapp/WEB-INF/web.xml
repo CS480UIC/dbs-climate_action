@@ -199,6 +199,17 @@
     <servlet-name>AqiServletUpdate</servlet-name>
     <url-pattern>/AqiServletUpdate</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>Natural_DisasterServletCreate</display-name>
+    <servlet-name>Natural_DisasterServletCreate</servlet-name>
+    <servlet-class>natural_disaster.web.servlet.Natural_DisasterServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Natural_DisasterServletCreate</servlet-name>
+    <url-pattern>/Natural_DisasterServletCreate</url-pattern>
+  </servlet-mapping>
    
     <servlet>
     <description></description>
