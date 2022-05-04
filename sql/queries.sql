@@ -1,4 +1,8 @@
 /* 7.1 */
+SELECT aqi_id, reporting_city 
+FROM aqi 
+WHERE aqi_metric>50;
+
 SELECT name, area
 FROM state
 WHERE area>100000
