@@ -317,6 +317,29 @@
     <url-pattern>/findEmission</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <description></description>
+    <display-name>findAqi</display-name>
+    <servlet-name>findAqi</servlet-name>
+    
+    <servlet-class>aqi.web.servlet.findAqi</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findAqi</servlet-name>
+    <url-pattern>/findAqi</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>findDisaster</display-name>
+    <servlet-name>findDisaster</servlet-name>
+    
+    <servlet-class>natural_disaster.web.servlet.findDisaster</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findDisaster</servlet-name>
+    <url-pattern>/findDisaster</url-pattern>
+  </servlet-mapping>
   
   <servlet>
     <description></description>
@@ -329,6 +352,9 @@
     <servlet-name>findAll</servlet-name>
     <url-pattern>/findAll</url-pattern>
   </servlet-mapping>
+  
+  
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>

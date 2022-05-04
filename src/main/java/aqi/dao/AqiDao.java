@@ -5,8 +5,11 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import aqi.domain.Aqi;
+import user.domain.User;
 
 //import java.util.ArrayList;
 //import java.util.List;
@@ -135,6 +138,29 @@ public class AqiDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	
+	public List<Object> findAqi() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
+			String sql = "SELECT aqi_id, reporting_city FROM aqi Where aqi_metric>50;";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Aqi aqi = new Aqi();
+				aqi.setAqi_id(resultSet.getString("aqi_id"));
+				aqi.setReporting_city(resultSet.getString("reporting_city"));
+	    		list.add(aqi);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
 	}
 	
 }

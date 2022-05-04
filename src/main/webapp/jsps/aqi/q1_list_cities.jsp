@@ -16,8 +16,8 @@
 	</tr>
 <c:forEach items="${CityList}" var="city">
 	<tr>
-		<td>${city.id}</td>
-		<td>${city.reporting}</td>
+		<td>${city.aqi_id}</td>
+		<td>${city.reporting_city}</td>
 	</tr>
 </c:forEach>
 </table>

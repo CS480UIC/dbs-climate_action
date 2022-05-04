@@ -5,14 +5,16 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-
-
+import natural_disaster.domain.Cost;
 
 //import java.util.ArrayList;
 //import java.util.List;
 
 import natural_disaster.domain.Natural_Disaster;
+import user.domain.User;
 
 /**
  * DDL functions performed in database
@@ -126,5 +128,28 @@ public class Natural_DisasterDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	
+	public List<Object> findDisaster() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
+			String sql = "SELECT disaster_name, SUM(damage_cost) AS damage_cost FROM natural_disaster GROUP BY disaster_name;";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Cost disaster = new Cost();
+				disaster.setDisaster_name(resultSet.getString("disaster_name"));
+				disaster.setDamage_cost(Double.parseDouble(resultSet.getString("damage_cost")));
+	    		list.add(disaster);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
 	}
 }

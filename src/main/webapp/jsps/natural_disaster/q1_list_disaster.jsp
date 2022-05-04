@@ -16,8 +16,8 @@
 	</tr>
 <c:forEach items="${DisasterList}" var="disaster">
 	<tr>
-		<td>${disaster.name}</td>
-		<td>${disaster.cost}</td>
+		<td>${disaster.disaster_name}</td>
+		<td>${disaster.damage_cost}</td>
 	</tr>
 </c:forEach>
 </table>
