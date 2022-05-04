@@ -2,6 +2,7 @@ package natural_disaster.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -40,13 +41,13 @@ public class Natural_DisasterServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		AqiDao entity1dao = new AqiDao();
-		Natural_Disaster entity1 = null;
+		Natural_DisasterDao natural_disasterdao = new Natural_DisasterDao();
+		Natural_Disaster natural_disaster = null;
 
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1dao.findByAqi_id(request.getParameter("username"));
+				natural_disaster = natural_disasterdao.findByNid(Integer.parseInt(request.getParameter("n_id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -55,14 +56,14 @@ public class Natural_DisasterServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(entity1.getUsername()!=null){
-				request.setAttribute("entity1", entity1);
-				request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
+			if(natural_disaster.getN_id()!=null){
+				request.setAttribute("natural_disaster", natural_disaster);
+				request.getRequestDispatcher("/jsps/natural_disaster/natural_disaster_update_output.jsp").forward(request, response);
 
 			}
 			else{
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "Natural Disaster not found");
+				request.getRequestDispatcher("/jsps/natural_disaster/natural_disaster_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
@@ -75,12 +76,14 @@ public class Natural_DisasterServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setPassword(info.get(2));
-			form.setEmail(info.get(3));
-			form.setUsername(request.getParameter("username"));
+			
+			form.setN_id(Integer.parseInt(request.getParameter("n_id")));
+			form.setDisaster_name(request.getParameter("disaster_name"));
+			form.setOccurence_date(java.sql.Date.valueOf(request.getParameter("occurence_date")));
+			form.setDamage_cost(Double.parseDouble(request.getParameter("damage_cost")));
 
 			try {
-				entity1dao.update(form);
+				natural_disasterdao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -89,10 +92,10 @@ public class Natural_DisasterServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "Natural Disaster Updated");
+			request.getRequestDispatcher("/jsps/natural_disaster/natural_disaster_read_output.jsp").forward(request, response);
 		}
-	}
+	} 
 }
 
 

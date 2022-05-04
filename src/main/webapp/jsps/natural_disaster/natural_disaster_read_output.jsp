@@ -26,7 +26,7 @@
 <form>
 	Disaster ID   :<input type="number" name="n_id" value="${natural_disaster.n_id }" disabled/>
 	<br/>
-	Disaster Name：<input type="text" name="disaster_name" value="${natural_disaster.disaster_name }" disabled/>
+	Disaster Name：<input type="text" name="disaster_name1" value="${natural_disaster.disaster_name }" disabled/>
 	<br/>
 	Date of Occurence	：<input type="date" name="occurence_date" value="${natural_disaster.occurence_date }" disabled/>
 	<br/>

@@ -25,7 +25,7 @@
 <form action="<c:url value='/Natural_DisasterServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Delete Natural Disaster   :<input type="number" name="n_id" value="${form.n_id }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	<span style="color: red; font-weight: 900">${errors.n_id }</span>
 	<br/>
 	<input type="submit" value="Delete Natural Disaster entity"/>
 </form>

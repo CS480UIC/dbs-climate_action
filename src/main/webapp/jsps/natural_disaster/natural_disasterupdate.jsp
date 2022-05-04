@@ -22,10 +22,10 @@
   
   <body>
   <h1>Update</h1>
-<form action="<c:url value='natural_disaster_update_output.jsp'/>" method="post">
+<form action="<c:url value='/Natural_DisasterServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update Disaster ID   :<input type="text" name="n_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Update Disaster ID   :<input type="number" name="n_id" value="${form.n_id }"/>
+	<span style="color: red; font-weight: 900">${errors.n_id }</span>
 	<br/>
 	<input type="submit" value="Update Natural Disaster"/>
 </form>

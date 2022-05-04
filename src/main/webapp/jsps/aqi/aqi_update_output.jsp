@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>Update AQI Entity</h1>
+  <h1>Update AQI</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
 	AQI ID    :<input type="text" name="aqi_id" value="${aqi.aqi_id }" disabled/>

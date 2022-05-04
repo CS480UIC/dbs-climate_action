@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Update Natural Disaster</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,30 +21,33 @@
   </head>
   
   <body>
-  <h1>Update Entity</h1>
+  <h1>Update Natural Disaster</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Disaster ID    :<input type="number" name="n_id1" value="${entity1.username }" disabled/>
+	Disaster ID    :<input type="number" name="n_id" value="${natural_disaster.n_id }" disabled/>
 	<br/>
 	
-	Disaster Name：<input type="text" name="disaster_name1" value="${entity1.password }" disabled />
+	Disaster Name：<input type="text" name="disaster_name" value="${natural_disaster.disaster_name }" disabled />
 	<br/>
-	Year of Occurence	：<input type="number" name="occurence_year1" value="${entity1.email }" disabled/>
+	Date of Occurence	：<input type="date" name="occurence_date" value="${natural_disaster.occurence_date }" disabled/>
 	<br/>
-	Damages Cost	：<input type="number" name="damage_cost1" value="${entity1.email }" disabled/>
+	Damages Cost	：<input type="number" name="damage_cost" value="${natural_disaster.damage_cost }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/Natural_DisasterServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${entity1.username }"/>
-	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+				<input type="hidden" name="n_id" value="${natural_disaster.n_id }"/>
+	Disaster Name: <input type="text" name="disaster_name" value="${form.disaster_name }"/>
+	<span style="color: red; font-weight: 900">${errors.disaster_name }</span>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Occurence Date：<input type="date" name="occurence_date" value="${form.occurence_date }"/>
+	<span style="color: red; font-weight: 900">${errors.occurence_date }</span>
 	<br/>
-	<input type="submit" value="Update Entity1"/>
+	Damage Cost：<input type="number" name="damage_cost" value="${form.damage_cost }"/>
+	<span style="color: red; font-weight: 900">${errors.damage_cost }</span>
+	<br/>
+	<input type="submit" value="Update Natural Disaster"/>
 </form>
 
 </body>

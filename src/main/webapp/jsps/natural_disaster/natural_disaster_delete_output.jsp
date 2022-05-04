@@ -25,7 +25,7 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/Natural_DisasterServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${entity1.username }"/>
+		<input type="hidden" name="n_id" value="${natural_disaster.n_id }"/>
 	Disaster ID   :<input type="number" name="n_id" value="${natural_disaster.number }" disabled/>
 	<br/>
 	

@@ -51,12 +51,12 @@ public class Natural_DisasterServletRead extends HttpServlet {
 		}
 		
 		if(natural_disaster.getN_id()!=null){
-					System.out.println(natural_disaster);
+					//System.out.println(natural_disaster);
 					request.setAttribute("natural_disaster", natural_disaster);
 					request.getRequestDispatcher("/jsps/natural_disaster/natural_disaster_read_output.jsp").forward(request, response);
 			}
 			else{
-			request.setAttribute("msg", "natural_disaster not found");
+			request.setAttribute("msg", "Natural Disaster not found!");
 			request.getRequestDispatcher("/jsps/natural_disaster/natural_disaster_read_output.jsp").forward(request, response);
 		}
 	}

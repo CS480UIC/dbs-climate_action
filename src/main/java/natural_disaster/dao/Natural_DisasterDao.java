@@ -6,7 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import natural_disaster.domain.Natural_Disaster;
+
+
 
 //import java.util.ArrayList;
 //import java.util.List;
@@ -41,10 +42,10 @@ public class Natural_DisasterDao {
 		    while(resultSet.next()){
 		    	Integer n_id = Integer.parseInt(resultSet.getString("n_id"));
 		    	if(n_id == nid){
-		    		natural_disaster.setN_id(n_id);
+		    		natural_disaster.setN_id(Integer.parseInt(resultSet.getString("n_id")));
 		    		natural_disaster.setDisaster_name(resultSet.getString("disaster_name"));
-		    		natural_disaster.setOccurence_date(java.sql.Date.valueOf(resultSet.getString("occurence_date")));
-		    		natural_disaster.setDamage_cost(Double.parseDouble(resultSet.getString("damage_cost")));	
+		    		natural_disaster.setOccurence_date(java.sql.Date.valueOf(resultSet.getString("occurence_date")));		
+		    		natural_disaster.setDamage_cost(Double.parseDouble(resultSet.getString("damage_cost")));
 		    	}
 		    }
 		    connect.close();
@@ -55,7 +56,7 @@ public class Natural_DisasterDao {
 	}	
 	
 	/**
-	 * insert Natural
+	 * insert Natural Disaster
 	 * @param form
 	 * @throws ClassNotFoundException 
 	 * @throws IllegalAccessException 
@@ -87,17 +88,17 @@ public class Natural_DisasterDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	/*
-	public void update(Entity1 form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void update(Natural_Disaster form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
+			String sql = "UPDATE natural_disaster SET disaster_name = ?, occurence_date = ?, damage_cost where n_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getPassword());
-			preparestatement.setString(2,form.getEmail());
-		    preparestatement.setString(3,form.getUsername());
+		    preparestatement.setString(1,form.getDisaster_name());
+			preparestatement.setDate(2,form.getOccurence_date());
+		    preparestatement.setDouble(3,form.getDamage_cost());
+		    preparestatement.setInt(4,form.getN_id());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -112,20 +113,18 @@ public class Natural_DisasterDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	
-	public void delete(Integer n_id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void delete(String nid) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
 			
 			String sql = "delete from natural_disaster where n_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setInt(1,n_id);
+		    preparestatement.setInt(1, Integer.parseInt(nid));
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
 	}
-	
 }

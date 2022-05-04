@@ -13,7 +13,7 @@ public class Natural_DisasterService {
 	private Natural_DisasterDao natural_disasterDao = new Natural_DisasterDao();
 	
 	/**
-	 * register a Natural
+	 * register a Natural Disaster
 	 * @param form
 	 * @throws ClassNotFoundException 
 	 * @throws IllegalAccessException 
@@ -22,7 +22,8 @@ public class Natural_DisasterService {
 	public void create(Natural_Disaster form) throws Natural_DisasterException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		// check the primary key of Entity1
 		Natural_Disaster natural_disaster = natural_disasterDao.findByNid(form.getN_id());
-		if(natural_disaster.getN_id()!=null && natural_disaster.getN_id() == form.getN_id()) throw new Natural_DisasterException("This Nid has been registered before!");
+		if(natural_disaster.getN_id()!=null && natural_disaster.getN_id() == form.getN_id()) throw new Natural_DisasterException("This Natural Disaster has been registered!");
 		natural_disasterDao.add(form);
 	}
+		
 }

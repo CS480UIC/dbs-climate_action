@@ -2,6 +2,7 @@ package natural_disaster.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -40,7 +41,7 @@ public class Natural_DisasterServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Natural_DisasterService entity1service = new Natural_DisasterService();
+		Natural_DisasterService natural_disasterservice = new Natural_DisasterService();
 		Map<String,String[]> paramMap = request.getParameterMap();
 		Natural_Disaster form = new Natural_Disaster();
 		List<String> info = new ArrayList<String>();
@@ -55,7 +56,7 @@ public class Natural_DisasterServletCreate extends HttpServlet {
 		form.setDamage_cost(Double.parseDouble(info.get(3)));
 		
 		try {
-			entity1service.create(form);
+			natural_disasterservice.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
 		} catch (ClassNotFoundException | Natural_DisasterException e) {

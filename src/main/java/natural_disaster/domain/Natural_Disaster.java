@@ -3,17 +3,21 @@ package natural_disaster.domain;
 import java.sql.Date;
 
 /**
- * Natural object
+ * Natural Disaster object
  * 
  * @author Deepanshu Raghuvanshi
  * 
  */
 public class Natural_Disaster {
+	/*
+	 * Correspond to the user table
+	 */
 	
 	private Integer n_id;
-	private String disaster_name; 
+	private String disaster_name;
 	private Date occurence_date;
-	private Double damage_cost; 
+	private Double damage_cost;
+	
 	/**
 	 * @return the n_id
 	 */
