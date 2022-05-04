@@ -63,7 +63,7 @@ public class Natural_DisasterServletDelete extends HttpServlet {
 		else if(method.equals("delete"))
 		{	
 			try {
-				natural_disasterDao.delete(request.getParameter("n_id"));
+				natural_disasterDao.delete(Integer.parseInt(request.getParameter("n_id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {

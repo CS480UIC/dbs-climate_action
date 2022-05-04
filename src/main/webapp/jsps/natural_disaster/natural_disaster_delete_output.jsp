@@ -26,7 +26,7 @@
 <form action="<c:url value='/Natural_DisasterServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
 		<input type="hidden" name="n_id" value="${natural_disaster.n_id }"/>
-	Disaster ID   :<input type="number" name="n_id" value="${natural_disaster.number }" disabled/>
+	Disaster ID   :<input type="number" name="n_id" value="${natural_disaster.n_id }" disabled/>
 	<br/>
 	
 	Disaster Name：<input type="text" name="disaster_name" value="${natural_disaster.disaster_name }" disabled/>

@@ -113,15 +113,16 @@ public class Natural_DisasterDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void delete(String nid) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void delete(Integer nid) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
 			
 			String sql = "delete from natural_disaster where n_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setInt(1, Integer.parseInt(nid));
+		    preparestatement.setInt(1,nid);
 		    preparestatement.executeUpdate();
+		    System.out.println(nid);
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
