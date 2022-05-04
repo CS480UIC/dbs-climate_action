@@ -232,6 +232,17 @@
     <servlet-name>Natural_DisasterServletDelete</servlet-name>
     <url-pattern>/Natural_DisasterServletDelete</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>Natural_DisasterServletUpdate</display-name>
+    <servlet-name>Natural_DisasterServletUpdate</servlet-name>
+    <servlet-class>natural_disaster.web.servlet.Natural_DisasterServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Natural_DisasterServletUpdate</servlet-name>
+    <url-pattern>/Natural_DisasterServletUpdate</url-pattern>
+  </servlet-mapping>
    
     <servlet>
     <description></description>
