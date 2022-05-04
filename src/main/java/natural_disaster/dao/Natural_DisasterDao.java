@@ -93,7 +93,7 @@ public class Natural_DisasterDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE natural_disaster SET disaster_name = ?, occurence_date = ?, damage_cost where n_id = ?";
+			String sql = "UPDATE natural_disaster SET disaster_name = ?, occurence_date = ?, damage_cost = ? where n_id = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,form.getDisaster_name());
 			preparestatement.setDate(2,form.getOccurence_date());
