@@ -8,6 +8,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import state.domain.FindAll;
+
 //import java.util.ArrayList;
 //import java.util.List;
 
@@ -175,5 +177,31 @@ public class StateDao {
 		return list;
 		
 	}
+
+	public List<Object> listall() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
+			String sql = "select s.code, s.name, s.area, c.emission_year, c.co_metric from state s left join carbon_dioxide c on s.code=c.co_id";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				FindAll all = new FindAll();
+				all.setCode(resultSet.getString("code"));
+	    		all.setName(resultSet.getString("name"));
+	    		all.setArea(Integer.parseInt(resultSet.getString("area")));
+	    		all.setEmission_year(Integer.parseInt(resultSet.getString("emission_year")));
+	    		all.setCo_metric(Double.parseDouble(resultSet.getString("co_metric")));
+	    		list.add(all);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
+		
 	
 }

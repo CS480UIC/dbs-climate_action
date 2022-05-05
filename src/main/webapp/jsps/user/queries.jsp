@@ -28,6 +28,8 @@
     <br/>
     <a href="<c:url value='/findState'/>" target="body">List the states with area more than 100,000</a>&nbsp;&nbsp;
     <br/>
+    <a href="<c:url value='/ListAll'/>" target="body">List cumulative data from 'state' and 'carbon_dioxide' table</a>&nbsp;&nbsp;
+    <br/>
     <a href="<c:url value='/findEmission'/>" target="body">List the years with their average CO2 emission</a>&nbsp;&nbsp;
  
     

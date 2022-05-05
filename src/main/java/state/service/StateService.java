@@ -37,5 +37,9 @@ public class StateService {
 		
 	}
 	
+	public List<Object> listall() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return stateDao.listall();
+		
+	}
 
 }
