@@ -14,6 +14,7 @@
 		<th>Code</th>
 		<th>Name</th>
 		<th>Aqi</th>
+		<th> Reporting City</th>
 		<th>Measuring Year</th>
 	</tr>
 <c:forEach items="${AqiList}" var="aqi">
@@ -21,6 +22,7 @@
 		<td>${aqi.code}</td>
 		<td>${aqi.name}</td>
 		<td>${aqi.aqi_metric}</td>
+		<td>${aqi.reporting_city}</td>
 		<td>${aqi.measuring_year}</td>
 	</tr>
 </c:forEach>

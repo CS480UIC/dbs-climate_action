@@ -4,6 +4,7 @@ public class Metric {
 	private String code;
 	private String name;
 	private Integer aqi_metric;
+	private String reporting_city;
 	private Integer measuring_year;
 	
 	/**
@@ -41,6 +42,18 @@ public class Metric {
 	 */
 	public void setAqi_metric(Integer aqi_metric) {
 		this.aqi_metric = aqi_metric;
+	}
+	/**
+	 * @return the reporting_city
+	 */
+	public String getReporting_city() {
+		return reporting_city;
+	}
+	/**
+	 * @param reporting_city the reporting_city to set
+	 */
+	public void setReporting_city(String reporting_city) {
+		this.reporting_city = reporting_city;
 	}
 	/**
 	 * @return the measuring_year
