@@ -1,6 +1,8 @@
 package natural_disaster.service;
 
 
+import java.util.List;
+
 import natural_disaster.dao.Natural_DisasterDao;
 import natural_disaster.domain.Natural_Disaster;
 
@@ -25,5 +27,9 @@ public class Natural_DisasterService {
 		if(natural_disaster.getN_id()!=null && natural_disaster.getN_id() == form.getN_id()) throw new Natural_DisasterException("This Natural Disaster has been registered!");
 		natural_disasterDao.add(form);
 	}
+	
+	public List<Object> findDisaster() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return natural_disasterDao.findDisaster();
 		
+}
 }

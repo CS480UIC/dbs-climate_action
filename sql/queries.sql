@@ -1,4 +1,8 @@
 /* 7.1 */
+SELECT aqi_id, reporting_city 
+FROM aqi 
+WHERE aqi_metric>50;
+
 SELECT name, area
 FROM state
 WHERE area>100000
@@ -14,6 +18,10 @@ FROM deforestation
 WHERE def_metric > 10000 ORDER BY def_id;
 
 /* 7.2 */
+SELECT disaster_name, SUM(damage_cost) AS damage_cost 
+FROM natural_disaster 
+GROUP BY disaster_name;
+
 SELECT emission_year, AVG(co_metric) AS avg_metric
 FROM carbon_dioxide 
 GROUP BY emission_year HAVING avg_metric>100;
