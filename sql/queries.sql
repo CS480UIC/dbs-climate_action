@@ -34,7 +34,11 @@ FROM aqi;
 
 
 /* 7.3 */
-select s.code, s.name, a.aqi_metric, a.measuring_year from state s left join aqi a on s.code = a.aqi_id order by a.aqi_metric desc;
+select s.code, s.name, a.aqi_metric, a.measuring_year 
+FROM state s 
+LEFT JOIN aqi a 
+ON s.code = a.aqi_id 
+ORDER BY a.aqi_metric DESC;
 
 SELECT * 
 FROM population AS p 
