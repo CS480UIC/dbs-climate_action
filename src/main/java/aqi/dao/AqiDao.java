@@ -172,7 +172,7 @@ public class AqiDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
-			String sql = "select s.code, s.name, a.aqi_metric, a.measuring_year from state s left join aqi a on s.code = a.aqi_id order by a.aqi_metric desc;";
+			String sql = "select s.code, s.name, a.aqi_metric, a.measuring_year from state AS s left join aqi  AS a on s.code = a.aqi_id order by a.aqi_metric desc;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
