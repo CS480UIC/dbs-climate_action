@@ -34,6 +34,8 @@ FROM aqi;
 
 
 /* 7.3 */
+select s.code, s.name, a.aqi_metric, a.measuring_year from state s left join aqi a on s.code = a.aqi_id order by a.aqi_metric desc;
+
 SELECT * 
 FROM population AS p 
 LEFT JOIN deforestation AS d 
