@@ -32,9 +32,11 @@
     <br/>
     <a href="<c:url value='/findEmission'/>" target="body">List the years with their average CO2 emission</a>&nbsp;&nbsp;
     <br/>
-    <a href="<c:url value='/findAqi'/>" target="body">Please list all the cities with aqi more than 50</a>&nbsp;&nbsp;
+    <a href="<c:url value='/findAqi'/>" target="body">Please list all the cities with aqi more than 50(simple)</a>&nbsp;&nbsp;
     <br/>
-    <a href="<c:url value='/findDisaster'/>" target="body">Please list all the disaster name with their total damage cost</a>&nbsp;&nbsp;
+    <a href="<c:url value='/findMetric'/>" target="body">Please list the aqi of all the states in descending order(complex)</a>&nbsp;&nbsp;
+    <br/>
+    <a href="<c:url value='/findDisaster'/>" target="body">Please list all the disaster name with their total damage cost(aggregate)</a>&nbsp;&nbsp;
     <br/>
     
   </body>

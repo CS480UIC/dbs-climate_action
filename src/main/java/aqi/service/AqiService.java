@@ -30,6 +30,11 @@ public class AqiService {
 	
 	public List<Object> findAqi() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
 		return aqiDao.findAqi();
+		
 	
-}
+	}
+	public List<Object> findMetric() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return aqiDao.findMetric();
+		
+	}
 }

@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import aqi.domain.Aqi;
+import aqi.domain.Metric;
+import natural_disaster.domain.Cost;
 import user.domain.User;
 
 //import java.util.ArrayList;
@@ -154,6 +156,32 @@ public class AqiDao {
 				aqi.setAqi_id(resultSet.getString("aqi_id"));
 				aqi.setReporting_city(resultSet.getString("reporting_city"));
 	    		list.add(aqi);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
+
+
+	
+	public List<Object> findMetric() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/climate_action", MySQL_user, MySQL_password);
+			String sql = "select s.code, s.name, a.aqi_metric, a.measuring_year from state s left join aqi a on s.code = a.aqi_id order by a.aqi_metric desc;";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Metric metric = new Metric();
+				metric.setCode(resultSet.getString("code"));
+				metric.setName(resultSet.getString("name"));
+				metric.setAqi_metric(Integer.parseInt(resultSet.getString("aqi_metric")));
+				metric.setMeasuring_year(Integer.parseInt(resultSet.getString("measuring_year")));
+	    		list.add(metric);
 			 }
 			connect.close();
 		} catch(SQLException e) {

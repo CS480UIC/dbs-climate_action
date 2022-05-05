@@ -317,7 +317,6 @@
     <url-pattern>/findEmission</url-pattern>
   </servlet-mapping>
 
-<<<<<<< HEAD
 
   <servlet>
     <description></description>
@@ -331,7 +330,6 @@
     <url-pattern>/ListAll</url-pattern>
   </servlet-mapping>
 
-=======
   <servlet>
     <description></description>
     <display-name>findAqi</display-name>
@@ -355,7 +353,18 @@
     <servlet-name>findDisaster</servlet-name>
     <url-pattern>/findDisaster</url-pattern>
   </servlet-mapping>
->>>>>>> branch 'main' of git@github.com:CS480UIC/dbs-climate_action.git
+  
+  <servlet>
+    <description></description>
+    <display-name>findMetric</display-name>
+    <servlet-name>findMetric</servlet-name>
+    
+    <servlet-class>aqi.web.servlet.findMetric</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findMetric</servlet-name>
+    <url-pattern>/findMetric</url-pattern>
+  </servlet-mapping>
   
   <servlet>
     <description></description>
